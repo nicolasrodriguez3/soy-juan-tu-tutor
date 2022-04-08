@@ -1,0 +1,23 @@
+{
+  "name": "soy-juan-tu-tutor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch scss:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolasrodriguez3/soy-juan-tu-tutor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicolasrodriguez3/soy-juan-tu-tutor/issues"
+  },
+  "homepage": "https://github.com/nicolasrodriguez3/soy-juan-tu-tutor#readme",
+  "dependencies": {
+    "sass": "^1.50.0"
+  }
+}
