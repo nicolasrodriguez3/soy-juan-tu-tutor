@@ -20,10 +20,7 @@ body {
   background-color: #fff;
 }
 
-.none {
-  display: none !important;
-}
-
+/************* COMPONENTES *************/
 /************* Header **************/
 .header-full {
   width: 100%;
@@ -52,13 +49,20 @@ body {
 .header a:hover {
   color: rgba(0, 0, 0, 0.5);
 }
-.header .btn-header {
+
+.btn-header {
   outline: 1px solid rgba(0, 0, 0, 0.5);
   border: none;
   background: none;
   cursor: pointer;
+  border-radius: 2px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.header .btn-header svg {
+.btn-header svg {
   fill: rgba(0, 0, 0, 0.5);
 }
 
@@ -80,13 +84,53 @@ body {
   pointer-events: none;
 }
 .header-links a {
-  font-size: 1.25rem;
+  font-size: 1rem;
   padding: 1rem;
   text-align: center;
+  word-wrap: none;
 }
 .header-links a:hover {
   color: rgba(0, 0, 0, 0.5);
   background-color: rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (min-width: 768px) {
+  .btn-header {
+    display: none;
+  }
+
+  .header-links {
+    position: static;
+    opacity: 1;
+    pointer-events: auto;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: auto;
+  }
+}
+.hero {
+  width: 100%;
+  background-image: url(../assets/hero-img.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.hero .hero-content {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/************* Clases utilitarias *************/
+.none {
+  display: none !important;
 }
 
 .is-active {

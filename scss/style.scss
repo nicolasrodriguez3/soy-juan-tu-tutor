@@ -17,10 +17,8 @@ body {
 	color: $black-color;
 	background-color: $white-color;
 }
-.none {
-	display: none !important;
-}
 
+/************* COMPONENTES *************/
 /************* Header **************/
 .header-full {
 	width: 100%;
@@ -48,15 +46,22 @@ body {
 			color: $black-alpha-color;
 		}
 	}
-	.btn-header {
-		outline: 1px solid $black-alpha-color;
-		border: none;
-		background: none;
-		cursor: pointer;
+}
+.btn-header {
+	outline: 1px solid $black-alpha-color;
+	border: none;
+	background: none;
+	cursor: pointer;
+	border-radius: 2px;
+	$size: 36px;
+	width: $size;
+	height: $size;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-		svg {
-			fill: $black-alpha-color;
-		}
+	svg {
+		fill: $black-alpha-color;
 	}
 }
 .header-logo {
@@ -77,14 +82,53 @@ body {
 	pointer-events: none;
 
 	a {
-		font-size: $fs4;
+		font-size: $fs5;
 		padding: 1rem;
 		text-align: center;
+		word-wrap: none;
 		&:hover {
 			color: $black-alpha-color;
 			background-color: $white-alpha-color;
 		}
 	}
+}
+@media screen and (min-width: 768px) {
+	.btn-header {
+		display: none;
+	}
+	.header-links {
+		position: static;
+		opacity: 1;
+		pointer-events: auto;
+		flex-direction: row;
+		justify-content: flex-end;
+		width: auto;
+	}
+}
+.hero {
+	width: 100%;
+	background-image: url(../assets/hero-img.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+	.hero-content {
+		background-color: $black-alpha-color;
+		height: 100vh;
+		padding: 1rem;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		color: $white-color;
+	}
+}
+
+/************* Clases utilitarias *************/
+.none {
+	display: none !important;
 }
 .is-active {
 	opacity: 1;
