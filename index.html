@@ -1,57 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Soy Juan, tu tutor</title>
-	<link rel="stylesheet" href="./css/style.css">
-	<link rel="shortcut icon" href="assets/emoji-mano.png" type="image/x-icon">
-</head>
-<body>
-	<div class="header-full">
-		<header class="header">
-			<a href="#" class="header-logo">Soy Juan, tu tutor</a>
-			<button class="btn-header" class="btn">
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z"/></svg>
-				<svg class="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z"/></svg>
-			</button>
-			<nav class="header-links">
-				<a href="#inicio">Inicio</a>
-				<a href="#acerca">Sobre mi</a>
-				<a href="#servicios">Servicios</a>
-				<a href="#testimonios">Testimonios</a>
-				<a href="#contacto">Contacto</a>
-			</nav>
-		</header>
-	</div>
-	<main>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Soy Juan, tu tutor</title>
+		<link rel="stylesheet" href="./css/style.css" />
+		<script src="js/app.js" defer></script>
+		<link rel="shortcut icon" href="assets/emoji-mano.png" type="image/x-icon" />
+	</head>
+	<body>
+		<div class="header-full">
+			<header class="header">
+				<a href="#" class="header-logo">Soy Juan, tu tutor</a>
+				<button class="btn-header" class="btn">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+						<path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z" />
+					</svg>
+					<svg class="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+						<path
+							d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.242 13.364 12 17.606 7.758z"
+						/>
+					</svg>
+				</button>
+				<nav class="header-links">
+					<a href="#">Inicio</a>
+					<a href="#acerca">Sobre mi</a>
+					<a href="#servicios">Servicios</a>
+					<a href="#testimonios">Testimonios</a>
+					<a href="#contacto">Contacto</a>
+				</nav>
+			</header>
+		</div>
 		<section class="hero" id="inicio">
 			<div class="hero-content">
-				<h1>Soy Juan, tu tutor</h1>
-				<p>¿Necesitas ayuda con tu TFG, tu TFM o tu tesis? </p>
-				<a class="btn" href="#contacto">Contáctame</a>
+				<h1>¿Necesitas ayuda con tu TFG, tu TFM o tu tesis?</h1>
+				<p>
+					Puedo orientarte en cuestiones académicas y ayudarte a corregir tu estilo de escritura, superar el síndrome de
+					"hoja en blanco" y analizar la estructura y la coherencia interna de tus textos. Soy autor de libros y
+					artículos académicos, investigador y docente universitario.
+				</p>
+				<a class="btn" href="#contacto">¡Escríbeme!</a>
 			</div>
 		</section>
 		<section id="acerca">
-			<div>
-				<h3>Sobre mi</h3>
-				<p>Me llamo <b>Juan Von Zeschau</b> soy profesor de </p>
-				<p>Desde hace mas de 10 años me dedico a acompañar estudiantes en el transcurso de su TFG o TGM</p>
-			</div>
-			<div>
-				<img src="assets/2.png" alt="Fotografia de Juan">
+			<article class="container">
+				<h3 class="subtitulo">Sobre mi</h3>
+				<div class="acerca-texto">
+					<p>Me llamo <b>Juan Von Zeschau</b></p>
+					<p>Soy autor de libros y artículos académicos, investigador y docente universitario. Mi campo de conocimiento son las humanidades, las ciencias sociales, las ciencias de la educación y la psicología.</p>
+					<p>A lo largo de los años, he acompañado a personas de diversos países en la realización de su TFG/TFM, tutorizándolos sobre temáticas tan variadas como la ciencia política, la psicología, la criminología, la educación social o las letras. Disfruto debatir sobre los temas a abordar y los diferentes enfoques teóricos, y también me gusta asistir en la escritura académica que este tipo de trabajos requieren. </p>
+				</div>
+				<div>
+					<img class="acerca-foto" src="assets/2.png" alt="Fotografia de Juan" />
+				</div>
+			</article>
+		</section>
+		<section id="servicios">
+			<div class="container">
+				<h3 class="subtitulo">Servicios</h3>
+				<div class="servicios-texto">
+				</div>
 			</div>
 		</section>
-	</main>
-	<h1>prueba</h1>
-	<h2>prueba</h2>
-	<h3>prueba</h3>
-	<h4>prueba</h4>
-	<h5>prueba</h5>
-	<h6>prueba</h6>
-	<p>prueba</p>
 
-	<script src="js/app.js"></script>
-</body>
+		<h1>prueba</h1>
+		<h2>prueba</h2>
+		<h3>prueba</h3>
+		<h4>prueba</h4>
+		<h5>prueba</h5>
+		<h6>prueba</h6>
+		<p>prueba</p>
+	</body>
 </html>

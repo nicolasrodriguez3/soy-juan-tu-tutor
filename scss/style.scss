@@ -16,10 +16,11 @@ body {
 	line-height: 1.5;
 	color: $black-color;
 	background-color: $white-color;
+	overflow-x: hidden;
 }
 
 /************* COMPONENTES *************/
-/************* Header **************/
+/* Header */
 .header-full {
 	width: 100%;
 	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -104,15 +105,15 @@ body {
 		justify-content: flex-end;
 		width: auto;
 		height: 4rem;
-		a{
+		a {
 			display: flex;
 			align-items: center;
 		}
 	}
 }
 
-/********** Botones **********/
-.btn{
+/* Botones */
+.btn {
 	text-decoration: none;
 	padding: 0.5rem 1rem;
 	background: $first-color;
@@ -128,7 +129,7 @@ body {
 	}
 }
 
-/********** Hero **********/
+/* Hero */
 .hero {
 	width: 100%;
 	background-image: url(../assets/hero-img.jpg);
@@ -144,9 +145,20 @@ body {
 		width: 100%;
 		display: flex;
 		flex-direction: column;
+		gap: 1rem;
 		align-items: center;
 		justify-content: center;
 		color: $white-color;
+		text-align: center;
+
+		h1 {
+			font-size: $fs2;
+		}
+		p {
+			font-size: $fs4;
+			margin-bottom: 1rem;
+			max-width: max(500px, 50%);
+		}
 	}
 }
 
@@ -158,5 +170,59 @@ body {
 	opacity: 1;
 	pointer-events: auto;
 }
-
+.container {
+	max-width: $max-width;
+	margin: 0 auto;
+	padding: 3rem 1rem;
+}
 /************* Estilos del sitio **************/
+/* SOBRE MI */
+#acerca {
+	background-color: $light-gray-color;
+	width: 100%;
+
+	& > .container {
+		display: grid;
+		align-items: center;
+		min-height: 100vh;
+	}
+	.acerca-foto {
+		width: 100%;
+		height: auto;
+	}
+	.acerca-texto p {
+		line-height: 1.5;
+		font-size: $fs4;
+		margin: 2rem 0;
+	}
+}
+@media screen and(min-width: 768px) {
+	#acerca > .container {
+		grid-template-columns: 50% 40%;
+		justify-content: space-evenly;
+	}
+	.subtitulo {
+		grid-column: span 2;
+	}
+}
+
+/* Servicios */
+#servicios {
+	& > .container {
+		display: grid;
+		align-items: center;
+		min-height: 100vh;
+	}
+}
+
+/* Subtitulos */
+.subtitulo {
+	font-size: $fs3;
+	font-weight: bold;
+	text-align: center;
+	margin: 2rem auto;
+	padding: 1rem;
+	border-top: 2px solid $first-color;
+	border-bottom: 2px solid $first-color;
+	min-width: 50%;
+}
