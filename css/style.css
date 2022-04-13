@@ -218,6 +218,7 @@ body {
 
 /* Subtitulos */
 .subtitulo {
+  font-family: 'Nunito', sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
@@ -257,9 +258,16 @@ body {
     grid-template-columns: repeat(2,1fr);
   }
 }
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 580px) {
   .service {
     grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .service article {
+    width: 279px;
+    
   }
 }
 /* Service End */
