@@ -41,21 +41,21 @@
 	}
 }
 @media screen and (max-width: 372px) {
-	.footerIndex {
-		grid-template-columns: 1fr;
-		.footerLinks {
-			grid-column: 1;
-			display: flex;
-			justify-content: center;
-			a {
-				padding-left: 35px;
-			}
-		}
-		.social {
-			grid-column: 1;
-		}
-		.copyRight {
-			grid-column: 1;
-		}
-	}
+    .footerIndex {
+      grid-template-columns: 1fr;
+      .footerLinks{
+        grid-column: 1;
+        display: flex;
+        justify-content: center;
+        a{
+            padding-left:35px;
+          }
+      }
+      .social {
+        grid-column: 1;
+      }
+      .copyRight {
+        grid-column: 1;
+      }
+    }  
 }
