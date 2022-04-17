@@ -1,3 +1,65 @@
+.footerIndex {
+  width: 100%;
+  background-color: #181d38;
+  color: #fff;
+  position: static;
+  bottom: 0;
+  padding-top: 15px;
+  display: grid;
+}
+.footerIndex a {
+  color: #fff;
+  text-decoration: none;
+}
+.footerIndex a:hover {
+  opacity: 0.4;
+}
+.footerIndex section {
+  margin: 20px;
+}
+.footerIndex .footerLinks {
+  display: flex;
+  justify-content: center;
+  grid-column: 1;
+}
+.footerIndex .footerLinks ul li {
+  font-family: "Nunito", sans-serif;
+  list-style: none;
+}
+.footerIndex .social {
+  font-family: "Heebo", sans-serif;
+  text-align: center;
+  grid-column: 2;
+}
+.footerIndex .social a {
+  font-size: 30px;
+  margin: 0 15px 0 0;
+}
+.footerIndex .copyRight {
+  text-align: center;
+  font-family: "Heebo", sans-serif;
+  grid-column: 1/3;
+}
+
+@media screen and (max-width: 372px) {
+  .footerIndex {
+    grid-template-columns: 1fr;
+  }
+  .footerIndex .footerLinks {
+    grid-column: 1;
+    display: flex;
+    justify-content: center;
+  }
+  .footerIndex .footerLinks a {
+    padding-left: 35px;
+  }
+  .footerIndex .social {
+    grid-column: 1;
+  }
+  .footerIndex .copyRight {
+    grid-column: 1;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,7 +76,7 @@ html {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Raleway", sans-serif;
   line-height: 1.5;
   color: #000;
   background-color: #fff;
@@ -56,7 +118,7 @@ body {
   border: none;
   background: none;
   cursor: pointer;
-  border-radius: 2px;
+  border-radius: 50%;
   width: 36px;
   height: 36px;
   display: flex;
@@ -178,6 +240,24 @@ body {
   padding: 3rem 1rem;
 }
 
+/* Box shadow */
+.shadows {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Subtitulos */
+.subtitulo {
+  font-size: 3rem;
+  font-family: "Ms Madi", cursive;
+  font-weight: bold;
+  text-align: center;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-top: 2px solid #FFB545;
+  border-bottom: 2px solid #FFB545;
+  min-width: 50%;
+}
+
 /************* Estilos del sitio **************/
 /* SOBRE MI */
 #acerca {
@@ -216,126 +296,24 @@ body {
   min-height: 100vh;
 }
 
-/* Subtitulos */
-.subtitulo {
-  font-family: 'Nunito', sans-serif;
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-align: center;
-  margin: 2rem auto;
-  padding: 1rem;
-  border-top: 2px solid #FFB545;
-  border-bottom: 2px solid #FFB545;
-  min-width: 50%;
-}
-
-/* Service Start */
-.service {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(4,1fr);
-}
-.service article {
-  text-align: center;
-  background-color: #FEF9E7 ;
-  padding: 15px;
-  border-radius: 10px;
-}
-.service article i {
-  font-size: 40px;
-  color: #FFB545;
-}
-.service article h5 {
-  font-family: 'Nunito', sans-serif;
-  font-size: 16px;
-  padding: 5px 0;
-}
-.service article p {
-  font-family: 'Heebo', sans-serif;
-}
-@media screen and (max-width: 872px) {
-  .service {
-    grid-template-columns: repeat(2,1fr);
-  }
-}
-@media screen and (max-width: 580px) {
-  .service {
-    grid-template-columns: 1fr;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .service article {
-    width: 279px;
-    
-  }
-}
-/* Service End */
-
-
-/* Footer Start */
-.footerIndex {
-  width: 100%;
-  background-color: #181d38;
-  color: #fff;
-  position: static;
-  bottom: 0;
-  padding-top: 15px;
-  display: grid;
-}
-.footerIndex a{
-  color: #fff;
-  text-decoration: none;
-}
-.footerIndex section {
-  margin: 20px;
-}
-.footerIndex a:hover {
-   opacity: 0.4;
-}
-.footerLinks ul li {
-  font-family: 'Nunito', sans-serif;
-  list-style: none;
-}
-.social a {
-  font-size: 30px;
-  margin: 0 15px 0 0;
-}
-.footerLinks{
+#modalidad .work {
   display: flex;
-  justify-content: center;
-  grid-column: 1;
+  flex-direction: column;
+  gap: 1rem;
 }
-.social {
-  font-family: 'Heebo', sans-serif;
+#modalidad .work article {
+  background-color: #FFB545;
+  padding: 2rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   text-align: center;
-  grid-column: 2;
 }
-.copyRight {
-  text-align: center;
-  font-family: 'Heebo', sans-serif;
-  grid-column: 1/3;
+#modalidad .work article > i {
+  font-size: 2rem;
 }
-
-@media screen and (max-width: 372px) {
-  .footerIndex {
-    grid-template-columns: 1fr;
-  }
-  .footerLinks{
-    grid-column: 1;
-    display: flex;
-    justify-content: center;
-  }
-  .footerLinks a{
-    padding-left:35px;
-  }
-  .social {
-    grid-column: 1;
-  }
-  .copyRight {
-    grid-column: 1;
-  }
+#modalidad .work article > h4 {
+  font-size: 1.25rem;
 }
-/* Footer End */
 
 /*# sourceMappingURL=style.css.map */
