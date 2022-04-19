@@ -1,0 +1,36 @@
+@import"variables";
+/* Service Start */
+.service {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4,1fr);
+    article {
+        text-align: center;
+        background-color: #FEF9E7 ;
+        padding: 15px;
+        border-radius: 10px;
+        i {
+            font-size: 40px;
+            color: $first-color
+        }
+        h4 {
+            font-family: 'Nunito', sans-serif;
+            font-size: 16px;
+            padding: 5px 0;
+        }
+        p {
+            font-family: 'Heebo', sans-serif;
+        }
+      }
+  }
+  @media screen and (max-width: 872px) {
+    .service {
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+  @media screen and (max-width: 730px) {
+    .service {
+      grid-template-columns: 1fr;
+    }
+  }
+  /* Service End */
