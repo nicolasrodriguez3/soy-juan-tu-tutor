@@ -2,6 +2,8 @@
   width: 100%;
   background-color: #181d38;
   color: #fff;
+  position: static;
+  bottom: 0;
   padding-top: 15px;
   display: grid;
 }
@@ -76,7 +78,7 @@ html {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Raleway", sans-serif;
   line-height: 1.5;
   color: #000;
   background-color: #fff;
@@ -118,7 +120,7 @@ body {
   border: none;
   background: none;
   cursor: pointer;
-  border-radius: 2px;
+  border-radius: 50%;
   width: 36px;
   height: 36px;
   display: flex;
@@ -240,6 +242,24 @@ body {
   padding: 3rem 1rem;
 }
 
+/* Box shadow */
+.shadows {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Subtitulos */
+.subtitulo {
+  font-size: 3rem;
+  font-family: "Ms Madi", cursive;
+  font-weight: bold;
+  text-align: center;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-top: 2px solid #FFB545;
+  border-bottom: 2px solid #FFB545;
+  min-width: 50%;
+}
+
 /************* Estilos del sitio **************/
 /* SOBRE MI */
 #acerca {
@@ -278,16 +298,24 @@ body {
   min-height: 100vh;
 }
 
-/* Subtitulos */
-.subtitulo {
-  font-size: 1.5rem;
-  font-weight: bold;
+#modalidad .work {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#modalidad .work article {
+  background-color: #FFB545;
+  padding: 2rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   text-align: center;
-  margin: 2rem auto;
-  padding: 1rem;
-  border-top: 2px solid #FFB545;
-  border-bottom: 2px solid #FFB545;
-  min-width: 50%;
+}
+#modalidad .work article > i {
+  font-size: 2rem;
+}
+#modalidad .work article > h4 {
+  font-size: 1.25rem;
 }
 
 /*# sourceMappingURL=style.css.map */
