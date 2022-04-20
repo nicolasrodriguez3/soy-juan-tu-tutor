@@ -123,6 +123,40 @@
   border-radius: 10px;
 }
 
+.lighbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 2;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.lighbox .close {
+  width: 60px;
+  height: 30px;
+  margin: 15px;
+  border-radius: 7px;
+}
+.lighbox .close:hover {
+  background-color: #181d38;
+  color: #fff;
+}
+.lighbox .grande {
+  width: 40%;
+  height: 80vh;
+  border-radius: 10px;
+}
+
+.active {
+  display: flex;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -162,7 +196,7 @@ img {
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 999999;
+  z-index: 1;
 }
 
 .header {

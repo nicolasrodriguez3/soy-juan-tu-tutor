@@ -52,3 +52,24 @@ testimonialsContainer.addEventListener('mouseout', ()=>{
 	start();
 })
 start();
+
+
+//modal testimonials
+const links = document.querySelectorAll('.a');
+const lighbox = document.querySelector('.lighbox');
+const grande = document.querySelector('.grande');
+const close = document.querySelector('.close');
+links.forEach ((eachLink,i)=> {
+	links[i].addEventListener('click',(e)=> {
+		e.preventDefault();
+		let ruta = eachLink.querySelector('.img').src;
+		console.log(ruta);
+		lighbox.classList.add('active');
+		grande.setAttribute('src', ruta);
+	})
+});
+close.addEventListener('click',()=> {
+	lighbox.classList.remove('active');
+	grande.setAttribute('src','');
+	
+});
