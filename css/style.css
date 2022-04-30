@@ -101,16 +101,13 @@
 /* Service End */
 .testimonialsContainer {
   display: flex;
-  margin: 50px;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 .testimonialsContainer .testimonialsItems {
   min-width: 300px;
   max-width: 300px;
   height: 300px;
-  margin: 0 20px 0 20px;
-  padding: 30PX;
+  margin: 2rem;
 }
 .testimonialsContainer .testimonialsItems:hover {
   transform: scale(1.2);
@@ -129,6 +126,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  padding: 1rem;
   background-color: rgba(255, 255, 255, 0.8);
   z-index: 2;
   display: none;
@@ -138,19 +136,17 @@
   flex-wrap: nowrap;
 }
 .lighbox .close {
-  width: 60px;
-  height: 30px;
-  margin: 15px;
-  border-radius: 7px;
+  font-size: 1.25rem;
+  margin: 1rem;
+  border-radius: 5px;
 }
 .lighbox .close:hover {
   background-color: #181d38;
   color: #fff;
 }
 .lighbox .grande {
-  width: 40%;
-  height: 80vh;
   border-radius: 10px;
+  min-width: 300px;
 }
 
 .active {
@@ -177,7 +173,7 @@ html {
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Tally Text Bold 1", "Comic Sans", sans-serif;
   line-height: 1.5;
   color: #000;
   background-color: #fff;
@@ -187,6 +183,40 @@ body {
 img {
   max-width: 100%;
   display: block;
+}
+
+/************* Clases utilitarias *************/
+.none {
+  display: none !important;
+}
+
+.is-active {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+/* Box shadow */
+.shadows {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Subtitulos */
+.subtitulo {
+  font-size: calc(2rem + 3vw);
+  font-family: "MS Madi", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-top: 2px solid #FFB545;
+  border-bottom: 2px solid #FFB545;
+  width: 100%;
 }
 
 /************* COMPONENTES *************/
@@ -320,46 +350,12 @@ img {
   text-align: center;
 }
 .hero .hero-content h1 {
-  font-size: calc(2rem + 2vw);
+  font-size: calc(1.5rem + 3vw);
 }
 .hero .hero-content p {
-  font-size: 1.5rem;
+  font-size: calc(1.125rem + 2vw);
   margin-bottom: 1rem;
   max-width: max(500px, 50%);
-}
-
-/************* Clases utilitarias *************/
-.none {
-  display: none !important;
-}
-
-.is-active {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 3rem 1rem;
-}
-
-/* Box shadow */
-.shadows {
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Subtitulos */
-.subtitulo {
-  font-size: 3rem;
-  font-family: "Tally Text Bold 1", "Comic Sans", sans-serif;
-  font-weight: bold;
-  text-align: center;
-  margin: 2rem auto;
-  padding: 1rem;
-  border-top: 2px solid #FFB545;
-  border-bottom: 2px solid #FFB545;
-  min-width: 50%;
 }
 
 /************* Estilos del sitio **************/
@@ -376,10 +372,11 @@ img {
 #acerca .acerca-foto {
   width: 100%;
   height: auto;
+  grid-row: 2/span 2;
 }
 #acerca .acerca-texto p {
   line-height: 1.5;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin: 2rem 0;
 }
 
@@ -397,14 +394,14 @@ img {
 .work {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 }
 .work article {
-  background-color: #eee;
-  padding: 2rem 1rem 1rem;
+  background-color: #fef9e7;
+  padding: 3rem 1rem 1rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
   text-align: center;
   max-width: 500px;
   margin: 0 auto;
@@ -415,6 +412,10 @@ img {
 }
 .work article > h4 {
   font-size: 1.5rem;
+}
+.work article > p {
+  font-size: 1.125rem;
+  line-height: 1.7;
 }
 
 @media screen and (min-width: 768px) {
@@ -451,6 +452,59 @@ img {
 /* Testimonios */
 #testimonios {
   overflow: hidden;
+}
+
+.container-slider {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  width: 1400%;
+  height: 400px;
+  margin-left: -100%;
+}
+
+.slider-section {
+  width: 100%;
+}
+
+.slider-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000;
+  font: bold 25px monospace;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-btn:hover {
+  background-color: #fff;
+}
+
+.slider-btn-left {
+  left: 10px;
+}
+
+.slider-btn-right {
+  right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

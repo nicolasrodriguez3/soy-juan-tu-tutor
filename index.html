@@ -6,7 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Soy Juan, tu tutor</title>
 		<link rel="stylesheet" href="./css/style.css" />
-		<script src="js/app.js" defer></script>
 		<link rel="shortcut icon" href="assets/emoji-mano.png" type="image/x-icon" />
 		<!-- icons -->
 		<script src="https://kit.fontawesome.com/dc1b245fb6.js" crossorigin="anonymous"></script>
@@ -42,9 +41,9 @@
 				<nav class="header-links">
 					<a href="#">Inicio</a>
 					<a href="#acerca">Sobre mi</a>
-					<a href="#servicios">Servicios</a>
-					<a href="#testimonios">Testimonios</a>
-					<a href="#contacto">Contacto</a>
+					<a href="#">Servicios</a>
+					<a href="#">Testimonios</a>
+					<a href="#">Contacto</a>
 				</nav>
 			</header>
 		</div>
@@ -53,10 +52,9 @@
 				<h1>¿Necesitas ayuda con tu TFG, tu TFM o tu tesis?</h1>
 				<p>
 					Puedo orientarte en cuestiones académicas y ayudarte a corregir tu estilo de escritura, superar el síndrome de
-					"hoja en blanco" y analizar la estructura y la coherencia interna de tus textos. Soy autor de libros y
-					artículos académicos, investigador y docente universitario.
+					"hoja en blanco" y analizar la estructura y la coherencia interna de tus textos.
 				</p>
-				<a class="btn" href="#contacto">¡Escríbeme!</a>
+				<a class="btn" href="#">¡Escríbeme!</a>
 			</div>
 		</section>
 		<section id="acerca">
@@ -75,16 +73,16 @@
 						teóricos, y también me gusta asistir en la escritura académica que este tipo de trabajos requieren.
 					</p>
 				</div>
-				<div>
-					<img class="acerca-foto" src="assets/2.png" alt="Fotografia de Juan" />
+				<div class="acerca-foto">
+					<img src="assets/2.png" alt="Fotografia de Juan" />
 				</div>
 			</article>
 		</section>
 
 		<!-- Work Start -->
-		<section id="modalidad">
+		<section id="servicios">
 			<div class="container">
-				<h3 class="subtitulo">Modalidad de Trabajo</h3>
+				<h3 class="subtitulo">Servicios</h3>
 				<div class="work">
 					<article class="shadows">
 						<i class="fa-solid fa-book-open"></i>
@@ -123,9 +121,9 @@
 		<!-- Work End -->
 
 		<!-- Service Start -->
-		<section id="servicios">
+		<section id="revisar">
 			<div class="container">
-				<h3 class="subtitulo">Servicios</h3> 
+				<h3 class="subtitulo">Servicios</h3>
 				<div class="service">
 					<article>
 						<i class="fa-solid fa-graduation-cap"></i>
@@ -156,83 +154,61 @@
 		<section id="testimonios">
 			<div class="container">
 				<h3 class="subtitulo">Testimonios</h3>
-				<article class="testimonialsContainer">
-					<picture class="testimonialsItems">
-						<a href="#" class="a img">
-							<img class="img" loading="lazy" src="./assets/3.png" alt="Testimonios de estudiantes">
-						</a>
-					</picture>
-					<picture class="testimonialsItems">
-						<a href="#" class="a img">
-							<img class="img" loading="lazy" src="./assets/4.png" alt="Testimonios de estudiantes">
-						</a>
-					</picture>
-					<picture class="testimonialsItems">
-						<a href="#" class="a img">
-							<img class="img" loading="lazy" src="./assets/5.png" alt="Testimonios de estudiantes">
-						</a>
-					</picture>
-					<picture class="testimonialsItems">
-						<a href="#" class="a img">
-							<img class="img" loading="lazy" src="./assets/6.png" alt="Testimonios de estudiantes">
-						</a>
-					</picture>
-					<picture class="testimonialsItems">
-						<a href="#" class="a img">
-							<img class="img" loading="lazy" src="./assets/7.png" alt="Testimonios de estudiantes">
-						</a>
-					</picture>
-					<picture class="testimonialsItems">
-						<a href="#" class="a img">
-							<img class="img" loading="lazy" src="./assets/8.png" alt="Testimonios de estudiantes">
-						</a>
-					</picture>
-					<picture class="testimonialsItems">
-						<a href="#" class="a img">
-							<img class="img" loading="lazy" src="./assets/9.png" alt="Testimonios de estudiantes">
-						</a>
-					</picture>
-					<picture class="testimonialsItems">
-						<a href="#" class="a img">
-							<img class="img" loading="lazy" src="./assets/10.png" alt="Testimonios de estudiantes">
-						</a>
-					</picture>
-					<picture class="testimonialsItems">
-						<a href="#" class="a img">
-							<img class="img" loading="lazy" src="./assets/11.png" alt="Testimonios de estudiantes">
-						</a>
-					</picture>
-					<picture class="testimonialsItems">
-						<a href="#" class="a img">
-							<img class="img" loading="lazy" src="./assets/12.png" alt="Testimonios de estudiantes">
-						</a>
-					</picture>
-					<picture class="testimonialsItems">
-						<a href="#" class="a img">
-							<img class="img" loading="lazy" src="./assets/13.png" alt="Testimonios de estudiantes">
-						</a>
-					</picture>
-					<picture class="testimonialsItems">
-						<a href="#" class="a img">
-							<img class="img" loading="lazy" src="./assets/14.png" alt="Testimonios de estudiantes">
-						</a>
-					</picture>
-					<picture class="testimonialsItems">
-						<a href="#" class="a img">
-							<img class="img" loading="lazy" src="./assets/15.png" alt="Testimonios de estudiantes">
-						</a>
-					</picture>
-					<picture class="testimonialsItems">
-						<a href="#" class="a img">
-							<img class="img" loading="lazy" src="./assets/16.png" alt="Testimonios de estudiantes">
-						</a>
-					</picture>
+				<article class="container-slider">
+					<div class="slider" id="slider">
+						<picture class="slider-section">
+							<img class="slider-img" loading="lazy" src="./assets/3.png" alt="Testimonios de estudiantes" />
+						</picture>
+						<picture class="slider-section">
+							<img class="slider-img" loading="lazy" src="./assets/4.png" alt="Testimonios de estudiantes" />
+						</picture>
+						<picture class="slider-section">
+							<img class="slider-img" loading="lazy" src="./assets/5.png" alt="Testimonios de estudiantes" />
+						</picture>
+						<picture class="slider-section">
+							<img class="slider-img" loading="lazy" src="./assets/6.png" alt="Testimonios de estudiantes" />
+						</picture>
+						<picture class="slider-section">
+							<img class="slider-img" loading="lazy" src="./assets/7.png" alt="Testimonios de estudiantes" />
+						</picture>
+						<picture class="slider-section">
+							<img class="slider-img" loading="lazy" src="./assets/8.png" alt="Testimonios de estudiantes" />
+						</picture>
+						<picture class="slider-section">
+							<img class="slider-img" loading="lazy" src="./assets/9.png" alt="Testimonios de estudiantes" />
+						</picture>
+						<picture class="slider-section">
+							<img class="slider-img" loading="lazy" src="./assets/10.png" alt="Testimonios de estudiantes" />
+						</picture>
+						<picture class="slider-section">
+							<img class="slider-img" loading="lazy" src="./assets/11.png" alt="Testimonios de estudiantes" />
+						</picture>
+						<picture class="slider-section">
+							<img class="slider-img" loading="lazy" src="./assets/12.png" alt="Testimonios de estudiantes" />
+						</picture>
+						<picture class="slider-section">
+							<img class="slider-img" loading="lazy" src="./assets/13.png" alt="Testimonios de estudiantes" />
+						</picture>
+						<picture class="slider-section">
+							<img class="slider-img" loading="lazy" src="./assets/14.png" alt="Testimonios de estudiantes" />
+						</picture>
+						<picture class="slider-section">
+							<img class="slider-img" loading="lazy" src="./assets/15.png" alt="Testimonios de estudiantes" />
+						</picture>
+						<picture class="slider-section">
+							<img class="slider-img" loading="lazy" src="./assets/16.png" alt="Testimonios de estudiantes" />
+						</picture>
+					</div>
+					<div class="slider-btn slider-btn-left"><i class="fa-solid fa-angle-left"></i></div>
+					<div class="slider-btn slider-btn-right"><i class="fa-solid fa-angle-right"></i></div>
 				</article>
+
 				<article class="lighbox">
-					<button class="close">Cerrar</button>
-					<img class="grande" loading="lazy" src="" alt="">
+					<img class="grande" loading="lazy" src="" alt="" />
+					<button class="close btn">Cerrar</button>
 				</article>
 			</div>
+
 		</section>
 		<!-- Testimonials Start -->
 
@@ -272,5 +248,7 @@
 			</section>
 		</footer>
 		<!-- Footer End -->
+
+		<script src="js/app.js"></script>
 	</body>
 </html>

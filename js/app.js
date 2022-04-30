@@ -1,5 +1,5 @@
 ;((d) => {
-	const $btn = d.querySelector("header > button"),
+	const $btn = d.querySelector(".btn-header"),
 		$nav = d.querySelector("nav")
 
 	$btn.addEventListener("click", () => {
@@ -8,15 +8,6 @@
 		$nav.classList.toggle("is-active")
 	})
 
-	// no es necesario ya que fue solucionado con el evento "blur"
-/*	d.addEventListener("click",(e)=>{
-		if(!e.target.matches(".header-links a")) return false
-		$btn.firstElementChild.classList.remove("none")
-		$btn.lastElementChild.classList.add("none")
-		$nav.classList.remove("is-active")
-	})
-*/
-
 	$btn.addEventListener("blur", (e) => {
 		setTimeout(() => {
 			$btn.firstElementChild.classList.remove("none")
@@ -24,52 +15,48 @@
 			$nav.classList.remove("is-active")
 		}, 100)
 	})
+
+	// Testimonials
+	
 })(document)
 
+const $slider = document.querySelector(".slider"),
+	$btnLeft = document.querySelector(".slider-btn-left"),
+	$btnRight = document.querySelector(".slider-btn-right"),
+	$lastSliderSection = $slider.lastElementChild
 
-// Testimonials
-const testimonialsContainer = document.querySelector('.testimonialsContainer');
-let interval = null;
-let step = 1.5;
-let maxLeft = testimonialsContainer.scrollWidth - testimonialsContainer.clientWidth;
-const start = () =>	 {
- interval = setInterval (function () {
-	 testimonialsContainer.scrollLeft = testimonialsContainer.scrollLeft  + step;
-	 if (testimonialsContainer.scrollLeft === maxLeft) {
-		 step = step * -1;
-	 }else if (testimonialsContainer.scrollLeft === 0) {
-		 step = step * -1; 
-	 }
- }, 10);
-};
-const stop = () =>	 {
-	clearInterval(interval);
-};
-testimonialsContainer.addEventListener('mouseover', ()=>{
-	stop();
+$slider.insertAdjacentElement("afterbegin", $lastSliderSection)
+
+const nextSlide = () => {
+	const $firstSliderSection = $slider.firstElementChild
+	$slider.style.transition = "all 0.4s ease-in-out"
+	$slider.style.marginLeft = "-200%"
+	setTimeout(() => {
+		$slider.insertAdjacentElement("beforeend", $firstSliderSection)
+		$slider.style.transition = ""
+		$slider.style.marginLeft = "-100%"
+	}, 400)
+}
+
+const prevSlide = () => {
+	const $lastSliderSection = $slider.lastElementChild
+	$slider.style.transition = "all 0.4s ease-in-out"
+	$slider.style.marginLeft = "0%"
+	setTimeout(() => {
+		$slider.insertAdjacentElement("afterbegin", $lastSliderSection)
+		$slider.style.transition = ""
+		$slider.style.marginLeft = "-100%"
+	}, 400)
+}
+
+$btnLeft.addEventListener("click", prevSlide)
+$btnRight.addEventListener("click", nextSlide)
+
+let interval = setInterval(nextSlide, 5000)
+
+$slider.addEventListener("mouseover", () => {
+	clearInterval(interval)
 })
-testimonialsContainer.addEventListener('mouseout', ()=>{
-	start();
+$slider.addEventListener("mouseout", () => {
+	interval = setInterval(nextSlide, 5000)
 })
-start();
-
-
-//modal testimonials
-const links = document.querySelectorAll('.a');
-const lighbox = document.querySelector('.lighbox');
-const grande = document.querySelector('.grande');
-const close = document.querySelector('.close');
-links.forEach ((eachLink,i)=> {
-	links[i].addEventListener('click',(e)=> {
-		e.preventDefault();
-		let ruta = eachLink.querySelector('.img').src;
-		console.log(ruta);
-		lighbox.classList.add('active');
-		grande.setAttribute('src', ruta);
-	})
-});
-close.addEventListener('click',()=> {
-	lighbox.classList.remove('active');
-	grande.setAttribute('src','');
-	
-});
