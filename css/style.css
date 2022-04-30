@@ -157,6 +157,10 @@
   display: flex;
 }
 
+@font-face {
+  font-family: "Tally Text Bold 1";
+  src: url(../assets/Tally-Text-Bold-1.ttf);
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -234,7 +238,7 @@ img {
 }
 
 .header-logo {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -251,7 +255,7 @@ img {
   pointer-events: none;
 }
 .header-links a {
-  font-size: 1rem;
+  font-size: 1.25rem;
   padding: 1rem;
   text-align: center;
   word-wrap: none;
@@ -284,7 +288,7 @@ img {
   color: #fff;
   border: none;
   border-radius: 2px;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -293,59 +297,6 @@ img {
   background: rgba(255, 181, 69, 0.5);
 }
 
-/* Carousel */
-.carousel-testimonios {
-  display: flex;
-  animation: carousel 60s;
-}
-.carousel-testimonios img {
-  width: 100%;
-}
-
-@keyframes carousel {
-  0% {
-    transform: translateX(0);
-  }
-  8% {
-    transform: translateX(-100%);
-  }
-  12% {
-    transform: translateX(-200%);
-  }
-  24% {
-    transform: translateX(-300%);
-  }
-  32% {
-    transform: translateX(-400%);
-  }
-  40% {
-    transform: translateX(-500%);
-  }
-  48% {
-    transform: translateX(-600%);
-  }
-  56% {
-    transform: translateX(-700%);
-  }
-  64% {
-    transform: translateX(-800%);
-  }
-  72% {
-    transform: translateX(-900%);
-  }
-  80% {
-    transform: translateX(-1000%);
-  }
-  88% {
-    transform: translateX(-1100%);
-  }
-  93% {
-    transform: translateX(-1200%);
-  }
-  100% {
-    transform: translateX(-1300%);
-  }
-}
 /* Hero */
 .hero {
   width: 100%;
@@ -357,8 +308,8 @@ img {
 }
 .hero .hero-content {
   background-color: rgba(0, 0, 0, 0.5);
-  height: calc(100vh - 4rem);
-  padding: 1rem;
+  min-height: calc(100vh - 4rem);
+  padding: 2rem 1rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -369,10 +320,10 @@ img {
   text-align: center;
 }
 .hero .hero-content h1 {
-  font-size: 2rem;
+  font-size: calc(2rem + 2vw);
 }
 .hero .hero-content p {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   max-width: max(500px, 50%);
 }
@@ -401,7 +352,7 @@ img {
 /* Subtitulos */
 .subtitulo {
   font-size: 3rem;
-  font-family: "Ms Madi", cursive;
+  font-family: "Tally Text Bold 1", "Comic Sans", sans-serif;
   font-weight: bold;
   text-align: center;
   margin: 2rem auto;
@@ -428,13 +379,13 @@ img {
 }
 #acerca .acerca-texto p {
   line-height: 1.5;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   margin: 2rem 0;
 }
 
 @media screen and (min-width: 768px) {
   #acerca > .container {
-    grid-template-columns: 50% 40%;
+    grid-template-columns: 50% 45%;
     justify-content: space-evenly;
   }
 
@@ -463,7 +414,7 @@ img {
   color: #FFB545;
 }
 .work article > h4 {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 @media screen and (min-width: 768px) {
