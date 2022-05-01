@@ -4,6 +4,8 @@
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(4,1fr);
+    padding: 1rem;
+
     article {
         text-align: center;
         background-color: #FEF9E7 ;

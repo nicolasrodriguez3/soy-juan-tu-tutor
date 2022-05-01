@@ -20,7 +20,7 @@ html {
 	scroll-behavior: smooth;
 }
 body {
-	font-family: $font-family;
+	font-family: $font-text;
 	line-height: 1.5;
 	color: $black-color;
 	background-color: $white-color;
@@ -109,6 +109,7 @@ img{
 	}
 }
 .header-logo {
+	font-family: $font-family;
 	font-size: $fs2;
 	font-weight: bold;
 }
@@ -194,11 +195,12 @@ img{
 
 		h1 {
 			font-size: calc($fs3 + 3vw);
+			font-family: $font-family;
 		}
 		p {
-			font-size: calc($fs5 + 2vw);
-			margin-bottom: 1rem;
-			max-width: max(500px, 50%);
+			font-size: calc($fs5 + 1vw);
+			margin-bottom: 1.5rem;
+			max-width: max(400px, 50%);
 		}
 	}
 }
@@ -236,7 +238,7 @@ img{
 	}
 }
 
-/* Modalidad de trabajo */
+/* Servicios */
 .work{
 		display: flex;
 		flex-direction: column;
@@ -267,10 +269,24 @@ img{
 	}
 
 @media screen and (min-width: 768px) {
+	#servicios .container{
+		position: relative;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+	}
 	.work{
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: center;
+
+		.img-fondo-servicios{
+			position: absolute;
+			right: -50px;
+			bottom: 100px;
+			z-index: -1;
+			width: 50%;
+		}
+
 		article{
 			width: 45%;
 		}
@@ -280,15 +296,6 @@ img{
 	.work {
 			flex-wrap: nowrap;
 	}
-}
-
-@media screen and (min-width: 768px) {
-	#servicios .container{
-		grid-template-columns: repeat(2, 1fr);
-		gap: 1rem;
-	}
-}
-@media screen and (min-width: 992px) {
 	#servicios .container{
 		grid-template-columns: repeat(4, 1fr);
 		gap: 1rem;

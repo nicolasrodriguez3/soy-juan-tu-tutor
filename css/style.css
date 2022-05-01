@@ -68,6 +68,7 @@
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(4, 1fr);
+  padding: 1rem;
 }
 .service article {
   text-align: center;
@@ -173,7 +174,7 @@ html {
 }
 
 body {
-  font-family: "Tally Text Bold 1", "Comic Sans", sans-serif;
+  font-family: "Raleway", sans-serif;
   line-height: 1.5;
   color: #000;
   background-color: #fff;
@@ -209,7 +210,7 @@ img {
 /* Subtitulos */
 .subtitulo {
   font-size: calc(2rem + 3vw);
-  font-family: "MS Madi", sans-serif;
+  font-family: "MS Madi", cursive, sans-serif;
   font-weight: bold;
   text-align: center;
   margin: 2rem auto;
@@ -268,6 +269,7 @@ img {
 }
 
 .header-logo {
+  font-family: "Tally Text Bold 1", "Comic Sans", sans-serif;
   font-size: 2rem;
   font-weight: bold;
 }
@@ -351,11 +353,12 @@ img {
 }
 .hero .hero-content h1 {
   font-size: calc(1.5rem + 3vw);
+  font-family: "Tally Text Bold 1", "Comic Sans", sans-serif;
 }
 .hero .hero-content p {
-  font-size: calc(1.125rem + 2vw);
-  margin-bottom: 1rem;
-  max-width: max(500px, 50%);
+  font-size: calc(1.125rem + 1vw);
+  margin-bottom: 1.5rem;
+  max-width: max(400px, 50%);
 }
 
 /************* Estilos del sitio **************/
@@ -390,7 +393,7 @@ img {
     grid-column: span 2;
   }
 }
-/* Modalidad de trabajo */
+/* Servicios */
 .work {
   display: flex;
   flex-direction: column;
@@ -419,10 +422,23 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  #servicios .container {
+    position: relative;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
   .work {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  .work .img-fondo-servicios {
+    position: absolute;
+    right: -50px;
+    bottom: 100px;
+    z-index: -1;
+    width: 50%;
   }
   .work article {
     width: 45%;
@@ -432,14 +448,7 @@ img {
   .work {
     flex-wrap: nowrap;
   }
-}
-@media screen and (min-width: 768px) {
-  #servicios .container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-}
-@media screen and (min-width: 992px) {
+
   #servicios .container {
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
