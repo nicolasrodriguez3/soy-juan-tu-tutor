@@ -154,6 +154,7 @@ img{
 
 /* Botones */
 .btn {
+	font-family: $font-family;
 	text-decoration: none;
 	padding: 0.5rem 1rem;
 	background: $first-color;
@@ -174,12 +175,13 @@ img{
 /* Hero */
 .hero {
 	width: 100%;
-	background-image: url(../assets/hero-img.jpg);
+	background-image: url(https://img.freepik.com/foto-gratis/textura-fondo-tablero-corcho_133982-10.jpg?w=2000);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 	.hero-content {
 		background-color: $black-alpha-color;
 		min-height: calc(100vh - 4rem);
@@ -192,7 +194,7 @@ img{
 		justify-content: center;
 		color: $white-color;
 		text-align: center;
-
+		grid-column: 1/2;
 		h1 {
 			font-size: calc($fs3 + 3vw);
 			font-family: $font-family;
@@ -203,9 +205,16 @@ img{
 			max-width: max(400px, 50%);
 		}
 	}
+	.hero-img {
+		grid-column: 2/3;
+		background-color: $black-alpha-color;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 50px;
+		overflow-x: hidden;
+	}
 }
-
-
 /************* Estilos del sitio **************/
 /* SOBRE MI */
 #acerca {
