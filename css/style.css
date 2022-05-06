@@ -20,6 +20,9 @@
   justify-content: center;
   grid-column: 1;
 }
+.footerIndex .footerLinks ul {
+  margin-left: 0;
+}
 .footerIndex .footerLinks ul li {
   font-family: "Nunito", sans-serif;
   list-style: none;
@@ -78,7 +81,7 @@
 }
 .service article i {
   font-size: 40px;
-  color: #FFB545;
+  color: #edcda3;
 }
 .service article h4 {
   font-family: "Nunito", sans-serif;
@@ -114,7 +117,7 @@
   padding: 15px;
 }
 .container-slider .container-testimonials .fa-quote-left {
-  color: #FFB545;
+  color: #edcda3;
 }
 .container-slider .container-testimonials p {
   padding: 5px 10px 24px;
@@ -239,8 +242,8 @@ img {
   text-align: center;
   margin: 2rem auto;
   padding: 1rem;
-  border-top: 2px solid #FFB545;
-  border-bottom: 2px solid #FFB545;
+  border-top: 2px solid #edcda3;
+  border-bottom: 2px solid #edcda3;
   width: 100%;
 }
 
@@ -341,7 +344,7 @@ img {
   font-family: "Tally Text Bold 1", "Comic Sans", sans-serif;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  background: #FFB545;
+  background: #edcda3;
   color: #fff;
   border: none;
   border-radius: 2px;
@@ -448,7 +451,7 @@ img {
 }
 .work article > i {
   font-size: 2rem;
-  color: #FFB545;
+  color: #edcda3;
 }
 .work article > h4 {
   font-size: 1.5rem;
