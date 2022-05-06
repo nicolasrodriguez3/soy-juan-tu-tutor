@@ -133,6 +133,10 @@
   overflow: hidden;
   margin-bottom: 30px;
 }
+#testimonios .img-slider {
+  display: flex;
+  justify-content: center;
+}
 
 .container-slider {
   width: 100%;
