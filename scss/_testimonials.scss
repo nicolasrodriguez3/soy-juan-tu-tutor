@@ -28,6 +28,10 @@
 #testimonios{
 	overflow: hidden;
 	margin-bottom: 30px;
+	.img-slider {
+		display: flex;
+ 		justify-content: center;
+	}
 }
 .container-slider{
 	width: 100%;

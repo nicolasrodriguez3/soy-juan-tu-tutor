@@ -34,18 +34,18 @@ const nextSlide = () => {
 	setTimeout(() => {
 		$slider.insertAdjacentElement("beforeend", $firstSliderSection)
 		$slider.style.transition = ""
-		$slider.style.marginLeft = "-30%"
+		$slider.style.marginLeft = "-28%"
 	}, 400)
 }
 
 const prevSlide = () => {
 	const $lastSliderSection = $slider.lastElementChild
 	$slider.style.transition = "all 0.4s ease-in-out"
-	$slider.style.marginLeft = "0%"
+	$slider.style.marginLeft = "42%"
 	setTimeout(() => {
 		$slider.insertAdjacentElement("afterbegin", $lastSliderSection)
 		$slider.style.transition = ""
-		$slider.style.marginLeft = "-30%"
+		$slider.style.marginLeft = "-28%"
 	}, 400)
 }
 
