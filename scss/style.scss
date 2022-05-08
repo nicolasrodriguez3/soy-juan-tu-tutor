@@ -26,7 +26,7 @@ body {
 	background-color: $white-color;
 	overflow-x: hidden;
 }
-img{
+img {
 	max-width: 100%;
 	display: block;
 }
@@ -44,7 +44,7 @@ img{
 	padding: 3rem 1rem;
 }
 /* Box shadow */
-.shadows{
+.shadows {
 	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 /* Subtitulos */
@@ -66,7 +66,7 @@ img{
 	width: 100%;
 	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 	background-color: $third-color;
-	color: $white-color;
+	color: $dark-gray-color;
 	padding: 0 1rem;
 	position: sticky;
 	top: 0;
@@ -92,7 +92,7 @@ img{
 	}
 }
 .btn-header {
-	outline: 2px solid $white-color;
+	outline: 2px solid $dark-gray-color;
 	border: none;
 	background: none;
 	cursor: pointer;
@@ -105,7 +105,7 @@ img{
 	justify-content: center;
 
 	svg {
-		fill: $white-color;
+		fill: $dark-gray-color;
 	}
 }
 .header-logo {
@@ -121,12 +121,13 @@ img{
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+	transition: opacity 0.3s ease;
 	// para activar con js
 	opacity: 0;
-	transition: opacity 0.3s ease;
 	pointer-events: none;
 
 	a {
+		font-weight: bold;
 		font-size: $fs4;
 		padding: 1rem;
 		text-align: center;
@@ -164,13 +165,11 @@ img{
 	font-size: $fs3;
 	font-weight: bold;
 	cursor: pointer;
-	transition: background 0.3s ease;
+	transition: all 0.3s ease;
 	&:hover {
 		background: $first-alpha-color;
 	}
 }
-
-
 
 /* Hero */
 .hero {
@@ -179,41 +178,56 @@ img{
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	.hero-content {
-		background-color: $black-alpha-color;
-		min-height: calc(100vh - 4rem);
-		padding: 2rem 1rem;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-		align-items: center;
-		justify-content: center;
-		color: $white-color;
-		text-align: center;
-		grid-column: 1/2;
-		h1 {
-			font-size: calc($fs3 + 3vw);
-			font-family: $font-family;
-		}
-		p {
-			font-size: calc($fs5 + 1vw);
-			margin-bottom: 1.5rem;
-			max-width: max(400px, 50%);
-		}
+	// background-attachment: fixed;
+}
+
+.hero-container {
+	background-color: $black-alpha-color;
+	max-width: $max-width;
+	margin: 0 auto;
+	min-height: calc(100vh - 4rem);
+}
+.hero-content {
+	padding: 3rem 1rem;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	align-items: center;
+	justify-content: center;
+	color: $white-color;
+	text-align: center;
+	h1 {
+		font-size: calc($fs3 + 2vw);
+		font-family: $font-family;
 	}
-	.hero-img {
-		grid-column: 2/3;
-		background-color: $black-alpha-color;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding: 50px;
-		overflow-x: hidden;
+	p {
+		font-size: calc($fs6 + 1vw);
+		margin-bottom: 1.5rem;
+		max-width: max(400px, 50%);
 	}
+	a.btn {
+		font-size: $fs3 ;
+	}
+}
+.hero-img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+}
+@media (min-width: 768px) {
+	.hero-container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.hero-content{
+	grid-column: 1/2;
+	}
+	
+.hero-img {
+	grid-column: 2/3;
+}
 }
 /************* Estilos del sitio **************/
 /* SOBRE MI */
@@ -248,47 +262,47 @@ img{
 }
 
 /* Servicios */
-.work{
+.work {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+
+	article {
+		background-color: #fef9e7;
+		padding: 3rem 1rem 1rem;
 		display: flex;
 		flex-direction: column;
-		gap: 2rem;
+		gap: 1.5rem;
+		text-align: center;
+		max-width: 500px;
+		margin: 0 auto;
 
-		article{
-			background-color: #fef9e7;
-			padding: 3rem 1rem 1rem;
-			display: flex;
-			flex-direction: column;
-			gap: 1.5rem;
-			text-align: center;
-			max-width: 500px;
-			margin: 0 auto;
-
-			& > i{
-				font-size: 2rem;
-				color: $first-color;
-			}
-			& > h4{
-				font-size: $fs3;
-			}
-			& > p{
-				font-size: $fs5;
-				line-height: 1.7;
-			}
+		& > i {
+			font-size: 2rem;
+			color: $first-color;
+		}
+		& > h4 {
+			font-size: $fs3;
+		}
+		& > p {
+			font-size: $fs5;
+			line-height: 1.7;
 		}
 	}
+}
 
 @media screen and (min-width: 768px) {
-	#servicios .container{
+	#servicios .container {
 		position: relative;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 1rem;
 	}
-	.work{
+	.work {
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: center;
 
-		.img-fondo-servicios{
+		.img-fondo-servicios {
 			position: absolute;
 			right: -50px;
 			bottom: 100px;
@@ -296,16 +310,16 @@ img{
 			width: 50%;
 		}
 
-		article{
+		article {
 			width: 45%;
 		}
 	}
 }
 @media screen and (min-width: 992px) {
 	.work {
-			flex-wrap: nowrap;
+		flex-wrap: nowrap;
 	}
-	#servicios .container{
+	#servicios .container {
 		grid-template-columns: repeat(4, 1fr);
 		gap: 1rem;
 	}

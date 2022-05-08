@@ -253,7 +253,7 @@ img {
   width: 100%;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #E9B26A;
-  color: #fff;
+  color: #222;
   padding: 0 1rem;
   position: sticky;
   top: 0;
@@ -280,7 +280,7 @@ img {
 }
 
 .btn-header {
-  outline: 2px solid #fff;
+  outline: 2px solid #222;
   border: none;
   background: none;
   cursor: pointer;
@@ -292,7 +292,7 @@ img {
   justify-content: center;
 }
 .btn-header svg {
-  fill: #fff;
+  fill: #222;
 }
 
 .header-logo {
@@ -309,11 +309,12 @@ img {
   width: 100%;
   display: flex;
   flex-direction: column;
-  opacity: 0;
   transition: opacity 0.3s ease;
+  opacity: 0;
   pointer-events: none;
 }
 .header-links a {
+  font-weight: bold;
   font-size: 1.25rem;
   padding: 1rem;
   text-align: center;
@@ -351,7 +352,7 @@ img {
   font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 .btn:hover {
   background: rgba(255, 181, 69, 0.5);
@@ -364,14 +365,17 @@ img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
 }
-.hero .hero-content {
+
+.hero-container {
   background-color: rgba(0, 0, 0, 0.5);
+  max-width: 1200px;
+  margin: 0 auto;
   min-height: calc(100vh - 4rem);
-  padding: 2rem 1rem;
+}
+
+.hero-content {
+  padding: 3rem 1rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -380,27 +384,41 @@ img {
   justify-content: center;
   color: #fff;
   text-align: center;
-  grid-column: 1/2;
 }
-.hero .hero-content h1 {
-  font-size: calc(1.5rem + 3vw);
+.hero-content h1 {
+  font-size: calc(1.5rem + 2vw);
   font-family: "Tally Text Bold 1", "Comic Sans", sans-serif;
 }
-.hero .hero-content p {
-  font-size: calc(1.125rem + 1vw);
+.hero-content p {
+  font-size: calc(1rem + 1vw);
   margin-bottom: 1.5rem;
   max-width: max(400px, 50%);
 }
-.hero .hero-img {
-  grid-column: 2/3;
-  background-color: rgba(0, 0, 0, 0.5);
+.hero-content a.btn {
+  font-size: 1.5rem;
+}
+
+.hero-img {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 50px;
-  overflow-x: hidden;
+  padding: 1rem;
 }
 
+@media (min-width: 768px) {
+  .hero-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-content {
+    grid-column: 1/2;
+  }
+
+  .hero-img {
+    grid-column: 2/3;
+  }
+}
 /************* Estilos del sitio **************/
 /* SOBRE MI */
 #acerca {
