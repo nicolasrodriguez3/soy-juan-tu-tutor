@@ -124,7 +124,7 @@
   text-align: center;
 }
 .container-slider .container-testimonials h6 {
-  font-family: "Tally Text Bold 1", "Comic Sans", sans-serif;
+  font-family: "Tally Text Bold 1", "Comic Sans MS", "Comic Sans", cursive;
   font-size: 20px;
 }
 
@@ -206,7 +206,6 @@ html {
 
 body {
   font-family: "Raleway", sans-serif;
-  line-height: 1.5;
   color: #000;
   background-color: #efefef;
   overflow-x: hidden;
@@ -241,7 +240,7 @@ img {
 /* Subtitulos */
 .subtitulo {
   font-size: calc(2rem + 3vw);
-  font-family: "Tally Text Bold 1", "Comic Sans", sans-serif;
+  font-family: "Tally Text Bold 1", "Comic Sans MS", "Comic Sans", cursive;
   font-weight: bold;
   text-align: center;
   margin: 2rem auto;
@@ -252,6 +251,31 @@ img {
 }
 
 /************* COMPONENTES *************/
+/* Boton whatsapp */
+.whatsapp-fixed {
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+  z-index: 999;
+  color: white;
+  background-color: #25D366;
+  border-radius: 50%;
+  font-size: 2rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  transition: all 0.3s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.whatsapp-fixed:hover {
+  transform: scale(1.1);
+}
+
 /* Header */
 .header-full {
   width: 100%;
@@ -300,7 +324,7 @@ img {
 }
 
 .header-logo {
-  font-family: "Tally Text Bold 1", "Comic Sans", sans-serif;
+  font-family: "Tally Text Bold 1", "Comic Sans MS", "Comic Sans", cursive;
   font-size: 2rem;
   font-weight: bold;
 }
@@ -346,7 +370,7 @@ img {
 }
 /* Botones */
 .btn {
-  font-family: "Tally Text Bold 1", "Comic Sans", sans-serif;
+  font-family: "Tally Text Bold 1", "Comic Sans MS", "Comic Sans", cursive;
   text-decoration: none;
   padding: 0.5rem 1rem;
   background: #E9B26A;
@@ -365,7 +389,10 @@ img {
 /* Hero */
 .hero {
   width: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(https://img.freepik.com/foto-gratis/textura-fondo-tablero-corcho_133982-10.jpg?w=2000) no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%), url(https://img.freepik.com/foto-gratis/textura-fondo-tablero-corcho_133982-10.jpg?w=2000);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero-container {
@@ -388,13 +415,14 @@ img {
   text-align: center;
 }
 .hero-content h1 {
-  font-size: calc(1.5rem + 2vw);
-  font-family: "Tally Text Bold 1", "Comic Sans", sans-serif;
+  font-size: min(1.5rem + 2vw, 40px);
+  font-family: "Tally Text Bold 1", "Comic Sans MS", "Comic Sans", cursive;
 }
 .hero-content p {
-  font-size: calc(1rem + 1vw);
+  font-size: min(1rem + 1vw, 24px);
   margin-bottom: 1.5rem;
   max-width: max(400px, 50%);
+  line-height: 1.5;
 }
 .hero-content a.btn {
   font-size: 1.5rem;
