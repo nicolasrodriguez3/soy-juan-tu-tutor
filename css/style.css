@@ -81,7 +81,7 @@
 }
 .service article i {
   font-size: 40px;
-  color: #edcda3;
+  color: #E9B26A;
 }
 .service article h4 {
   font-family: "Nunito", sans-serif;
@@ -117,7 +117,7 @@
   padding: 15px;
 }
 .container-slider .container-testimonials .fa-quote-left {
-  color: #edcda3;
+  color: #E9B26A;
 }
 .container-slider .container-testimonials p {
   padding: 5px 10px 24px;
@@ -208,7 +208,7 @@ body {
   font-family: "Raleway", sans-serif;
   line-height: 1.5;
   color: #000;
-  background-color: #fff;
+  background-color: #efefef;
   overflow-x: hidden;
 }
 
@@ -245,9 +245,9 @@ img {
   font-weight: bold;
   text-align: center;
   margin: 2rem auto;
-  padding: 1rem;
-  border-top: 2px solid #edcda3;
-  border-bottom: 2px solid #edcda3;
+  padding: 1rem 0;
+  border-top: 2px solid #E9B26A;
+  border-bottom: 2px solid #E9B26A;
   width: 100%;
 }
 
@@ -349,7 +349,7 @@ img {
   font-family: "Tally Text Bold 1", "Comic Sans", sans-serif;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  background: #edcda3;
+  background: #E9B26A;
   color: #fff;
   border: none;
   border-radius: 2px;
@@ -365,21 +365,19 @@ img {
 /* Hero */
 .hero {
   width: 100%;
-  background-image: url(https://img.freepik.com/foto-gratis/textura-fondo-tablero-corcho_133982-10.jpg?w=2000);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url(https://img.freepik.com/foto-gratis/textura-fondo-tablero-corcho_133982-10.jpg?w=2000) no-repeat center center;
 }
 
 .hero-container {
-  background-color: rgba(0, 0, 0, 0.5);
   max-width: 1200px;
   margin: 0 auto;
   min-height: calc(100vh - 4rem);
+  padding: 3rem 1rem;
 }
 
 .hero-content {
-  padding: 3rem 1rem;
+  position: relative;
+  padding: 1rem 0;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -403,30 +401,17 @@ img {
 }
 
 .hero-img {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1rem;
 }
 
-@media (min-width: 768px) {
-  .hero-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .hero-content {
-    grid-column: 1/2;
-  }
-
-  .hero-img {
-    grid-column: 2/3;
-  }
-}
 /************* Estilos del sitio **************/
 /* SOBRE MI */
 #acerca {
-  background-color: #eee;
+  background-color: #efefef;
   width: 100%;
 }
 #acerca > .container {
@@ -437,7 +422,10 @@ img {
 #acerca .acerca-foto {
   width: 100%;
   height: auto;
-  grid-row: 2/span 2;
+  grid-row: 3/span 1;
+}
+#acerca .acerca-foto img {
+  margin: auto;
 }
 #acerca .acerca-texto p {
   line-height: 1.5;
@@ -445,16 +433,6 @@ img {
   margin: 2rem 0;
 }
 
-@media screen and (min-width: 768px) {
-  #acerca > .container {
-    grid-template-columns: 50% 45%;
-    justify-content: space-evenly;
-  }
-
-  .subtitulo {
-    grid-column: span 2;
-  }
-}
 /* Servicios */
 .work {
   display: flex;
@@ -473,7 +451,7 @@ img {
 }
 .work article > i {
   font-size: 2rem;
-  color: #edcda3;
+  color: #E9B26A;
 }
 .work article > h4 {
   font-size: 1.5rem;
@@ -484,6 +462,36 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  .hero-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-content {
+    grid-column: 1/2;
+  }
+
+  .hero-img {
+    grid-column: 2/3;
+  }
+
+  #acerca > .container {
+    grid-template-columns: 50% 45%;
+    justify-content: space-evenly;
+  }
+  #acerca .subtitulo {
+    grid-column: span 2;
+  }
+  #acerca .acerca-foto {
+    width: 100%;
+    height: auto;
+    grid-column: 2/span 1;
+    grid-row: initial;
+  }
+  #acerca .acerca-foto img {
+    margin: auto;
+  }
+
   #servicios .container {
     position: relative;
     grid-template-columns: repeat(2, 1fr);

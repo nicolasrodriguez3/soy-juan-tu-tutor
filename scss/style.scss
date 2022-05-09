@@ -23,7 +23,7 @@ body {
 	font-family: $font-text;
 	line-height: 1.5;
 	color: $black-color;
-	background-color: $white-color;
+	background-color: $light-gray-color;
 	overflow-x: hidden;
 }
 img {
@@ -54,7 +54,7 @@ img {
 	font-weight: bold;
 	text-align: center;
 	margin: 2rem auto;
-	padding: 1rem;
+	padding: 1rem 0;
 	border-top: 2px solid $first-color;
 	border-bottom: 2px solid $first-color;
 	width: 100%;
@@ -174,21 +174,23 @@ img {
 /* Hero */
 .hero {
 	width: 100%;
-	background-image: url(https://img.freepik.com/foto-gratis/textura-fondo-tablero-corcho_133982-10.jpg?w=2000);
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+	background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%), url(https://img.freepik.com/foto-gratis/textura-fondo-tablero-corcho_133982-10.jpg?w=2000) no-repeat center center;
+	// background-size: cover;
+	// background-position: center;
+	// background-repeat: no-repeat;
 	// background-attachment: fixed;
 }
 
 .hero-container {
-	background-color: $black-alpha-color;
 	max-width: $max-width;
 	margin: 0 auto;
 	min-height: calc(100vh - 4rem);
-}
-.hero-content {
 	padding: 3rem 1rem;
+}
+
+.hero-content {
+	position: relative;
+	padding: 1rem 0;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -207,28 +209,17 @@ img {
 		max-width: max(400px, 50%);
 	}
 	a.btn {
-		font-size: $fs3 ;
+		font-size: $fs3;
 	}
 }
 .hero-img {
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding: 1rem;
 }
-@media (min-width: 768px) {
-	.hero-container {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-	}
-	.hero-content{
-	grid-column: 1/2;
-	}
-	
-.hero-img {
-	grid-column: 2/3;
-}
-}
+
 /************* Estilos del sitio **************/
 /* SOBRE MI */
 #acerca {
@@ -243,21 +234,15 @@ img {
 	.acerca-foto {
 		width: 100%;
 		height: auto;
-		grid-row: 2 / span 2;
+		grid-row: 3 / span 1;
+		img {
+			margin: auto;
+		}
 	}
 	.acerca-texto p {
 		line-height: 1.5;
 		font-size: $fs4;
 		margin: 2rem 0;
-	}
-}
-@media screen and(min-width: 768px) {
-	#acerca > .container {
-		grid-template-columns: 50% 45%;
-		justify-content: space-evenly;
-	}
-	.subtitulo {
-		grid-column: span 2;
 	}
 }
 
@@ -292,6 +277,38 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+	.hero-container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.hero-content {
+		grid-column: 1/2;
+	}
+
+	.hero-img {
+		grid-column: 2/3;
+	}
+
+	// Sobre mí
+	#acerca {
+		& > .container {
+			grid-template-columns: 50% 45%;
+			justify-content: space-evenly;
+		}
+		.subtitulo {
+			grid-column: span 2;
+		}
+		.acerca-foto {
+			width: 100%;
+			height: auto;
+			grid-column: 2 / span 1;
+			grid-row: initial;
+			img {
+				margin: auto;
+			}
+		}
+	}
+
 	#servicios .container {
 		position: relative;
 		grid-template-columns: repeat(2, 1fr);
