@@ -208,7 +208,7 @@ body {
   font-family: "Raleway", sans-serif;
   color: #000;
   background-color: #efefef;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 img {
@@ -267,7 +267,7 @@ img {
   justify-content: center;
   width: 60px;
   height: 60px;
-  transition: all 0.3s;
+  transition: all 0.5s;
   opacity: 0;
   pointer-events: none;
 }
@@ -396,6 +396,7 @@ img {
 }
 
 .hero-container {
+  overflow-x: hidden !important;
   max-width: 1200px;
   margin: 0 auto;
   min-height: calc(100vh - 4rem);
@@ -435,6 +436,14 @@ img {
   justify-content: center;
   padding: 1rem;
 }
+.hero-img img {
+  border-radius: 20px;
+  max-width: min(400px, 80vw);
+  width: 100%;
+  max-height: 600px;
+  height: 100%;
+  object-fit: cover;
+}
 
 /************* Estilos del sitio **************/
 /* SOBRE MI */
@@ -449,7 +458,7 @@ img {
 }
 #acerca .acerca-foto {
   width: 100%;
-  height: auto;
+  margin-top: 1rem;
   grid-row: 3/span 1;
 }
 #acerca .acerca-foto img {

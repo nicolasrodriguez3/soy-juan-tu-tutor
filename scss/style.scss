@@ -23,7 +23,7 @@ body {
 	font-family: $font-text;
 	color: $black-color;
 	background-color: $light-gray-color;
-	overflow-x: hidden;
+	overflow-x: hidden !important;
 }
 img {
 	max-width: 100%;
@@ -76,7 +76,7 @@ img {
 	justify-content: center;
 	width: 60px;
 	height: 60px;
-	transition: all 0.3s;
+	transition: all 0.5s;
 	// para activar con js
 	opacity: 0;
 	pointer-events: none;
@@ -207,6 +207,8 @@ img {
 }
 
 .hero-container {
+	overflow-x: hidden !important;
+
 	max-width: $max-width;
 	margin: 0 auto;
 	min-height: calc(100vh - 4rem);
@@ -244,6 +246,15 @@ img {
 	align-items: center;
 	justify-content: center;
 	padding: 1rem;
+	img{
+		border-radius: 20px;
+		max-width: min(400px, 80vw);
+		width: 100%;
+		max-height: 600px;
+		height: 100%;
+		object-fit: cover;
+
+	}
 }
 
 /************* Estilos del sitio **************/
@@ -259,7 +270,7 @@ img {
 	}
 	.acerca-foto {
 		width: 100%;
-		height: auto;
+		margin-top: 1rem;
 		grid-row: 3 / span 1;
 		img {
 			margin: auto;
@@ -304,6 +315,7 @@ img {
 
 //* MEDIA QUERY MIN 768PX
 @media screen and (min-width: 768px) {
+	// HERO
 	.hero-container {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);

@@ -19,13 +19,23 @@
 	// Btn whatsapp
 const $btnWhatsapp = d.getElementById("btn-whatsapp")
 window.addEventListener("scroll", () => {
-	if (window.scrollY > 300) {
+	if (window.scrollY > 150) {
 		$btnWhatsapp.classList.add("is-active")
 	}
 	else {
 		$btnWhatsapp.classList.remove("is-active")
 	}
 })
+
+// Foto hero
+	const $fotoHero = d.getElementById("foto-hero-container"),
+		imgCircle = "../assets/2.png",
+		imgSquare = "../assets/img-juan.jpg",
+		$img = d.createElement("img")
+
+	 window.innerWidth < 768 ? $img.src = imgCircle : $img.src = imgSquare
+		
+	$fotoHero.appendChild($img)
 })(document)
 
 const $slider = document.querySelector(".slider"),
