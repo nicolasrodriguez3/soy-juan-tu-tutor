@@ -182,16 +182,19 @@ img {
 	font-family: $font-title;
 	text-decoration: none;
 	padding: 0.5rem 1rem;
-	background: $first-color;
+	background: none;
 	color: $white-color;
-	border: none;
-	border-radius: 2px;
+	
+	background: $first-color;
+	border: 2px solid $first-color;
+	border-radius: 4px;
 	font-size: $fs3;
 	font-weight: bold;
 	cursor: pointer;
 	transition: all 0.3s ease;
 	&:hover {
-		background: $first-alpha-color;
+		border: 2px solid $white-color;
+		background: none;
 	}
 }
 

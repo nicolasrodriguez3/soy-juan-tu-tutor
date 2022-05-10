@@ -81,7 +81,7 @@
 }
 .service article i {
   font-size: 40px;
-  color: #E9B26A;
+  color: #f9a826;
 }
 .service article h4 {
   font-family: "Nunito", sans-serif;
@@ -117,7 +117,7 @@
   padding: 15px;
 }
 .container-slider .container-testimonials .fa-quote-left {
-  color: #E9B26A;
+  color: #f9a826;
 }
 .container-slider .container-testimonials p {
   padding: 5px 10px 24px;
@@ -245,8 +245,8 @@ img {
   text-align: center;
   margin: 2rem auto;
   padding: 1rem 0;
-  border-top: 2px solid #E9B26A;
-  border-bottom: 2px solid #E9B26A;
+  border-top: 2px solid #f9a826;
+  border-bottom: 2px solid #f9a826;
   width: 100%;
 }
 
@@ -280,7 +280,7 @@ img {
 .header-full {
   width: 100%;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #E9B26A;
+  background-color: #ffba4c;
   color: #222;
   padding: 0 1rem;
   position: sticky;
@@ -330,7 +330,7 @@ img {
 }
 
 .header-links {
-  background-color: #E9B26A;
+  background-color: #ffba4c;
   position: fixed;
   left: 0;
   top: 4rem;
@@ -373,17 +373,19 @@ img {
   font-family: "Tally Text Bold 1", "Comic Sans MS", "Comic Sans", cursive;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  background: #E9B26A;
+  background: none;
   color: #fff;
-  border: none;
-  border-radius: 2px;
+  background: #f9a826;
+  border: 2px solid #f9a826;
+  border-radius: 4px;
   font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .btn:hover {
-  background: rgba(255, 181, 69, 0.5);
+  border: 2px solid #fff;
+  background: none;
 }
 
 /* Hero */
@@ -490,7 +492,7 @@ img {
 .work article > i {
   text-align: center;
   font-size: 3rem;
-  color: #E9B26A;
+  color: #f9a826;
 }
 .work article > h4 {
   text-transform: uppercase;
