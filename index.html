@@ -7,6 +7,8 @@
 		<title>Soy Juan, tu tutor</title>
 		<link rel="stylesheet" href="./css/style.css" />
 		<link rel="shortcut icon" href="assets/emoji-mano.png" type="image/x-icon" />
+		<!-- TODO: Agregar metadatos! -->
+
 		<!-- icons -->
 		<script src="https://kit.fontawesome.com/dc1b245fb6.js" crossorigin="anonymous"></script>
 		<!-- icons -->
@@ -51,21 +53,21 @@
 		<section class="hero" id="inicio">
 			<div class="hero-container">
 				<article class="hero-content">
-					<h1>¿Necesitas ayuda con tu TFG, tu TFM o tu tesis?</h1>
-					<p>
+					<h1 class="animate__animated animate__fadeIn animate__slow">¿Necesitas ayuda con tu TFG, tu TFM o tu tesis?</h1>
+					<p class="animate__animated animate__fadeIn animate__slow">
 						Puedo orientarte en cuestiones académicas y ayudarte a corregir tu estilo de escritura, superar el síndrome
 						de "hoja en blanco" y analizar la estructura y la coherencia interna de tus textos.
 					</p>
 					<a
-						class="btn"
+						class="btn animate__animated animate__fadeIn animate__slow"
 						href="https://api.whatsapp.com/send/?phone=5491158735951&text=Hola+Juan%21+Me+gustar%C3%ADa+tener+m%C3%A1s+informaci%C3%B3n+sobre+como+podes+ayudarme+con+mi+TF%21+Gracias%21&app_absent=0"
 						target="_blank"
 						rel="noreferrer noopener"
 						>¡Escríbeme!</a
 					>
 				</article>
-				<picture class="hero-img">
-					<img src="assets/2.png" alt="Fotografia de Juan" />
+				<picture id="foto-hero-container" class="hero-img animate__animated animate__fadeInRight animate__slow">
+					
 				</picture>
 			</div>
 		</section>
@@ -95,7 +97,7 @@
 			<div class="container">
 				<h3 class="subtitulo">Servicios</h3>
 				<div class="work">
-					<article class="shadows">
+					<article class="">
 						<i class="fa-solid fa-book-open"></i>
 						<h4>Puedo dirigir tu trabajo como tu tutor</h4>
 						<p>
@@ -106,7 +108,7 @@
 							estudiante.
 						</p>
 					</article>
-					<article class="shadows">
+					<article class="">
 						<i class="fa-solid fa-brain"></i>
 						<h4>Puedo corregir lo que tú escribas para que tenga un estilo y una calidad académicos</h4>
 						<p>
@@ -116,11 +118,7 @@
 							académico requiere, sin dejar por ello tus ideas de lado.
 						</p>
 					</article>
-					<picture class="img-fondo-servicios">
-						<img src="assets/undraw_agree_re_hor9.svg" alt="ilustracion" />
-					</picture>
-
-					<article class="shadows">
+					<article class="">
 						<i class="fa-solid fa-check-double"></i>
 						<h4>Puedo corregir/mejorar el diseño metodológico</h4>
 						<p>
@@ -130,6 +128,9 @@
 							tu TFG/TFM, a efectos de que tenga solidez y coherencia.
 						</p>
 					</article>
+					<picture class="img-fondo-servicios">
+						<img src="assets/undraw_agree_re_hor9.svg" alt="ilustracion" />
+					</picture>
 				</div>
 			</div>
 		</section>
@@ -322,10 +323,21 @@
 					</li>
 				</ul>
 			</section>
+<<<<<<< HEAD
 			<section class="contact">
+=======
+			<section class="social">
+				<div class="contact-icons">
+					<a href="https://www.facebook.com/soyjuantututor" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+					<a href="https://api.whatsapp.com/send/?phone=5491158735951&text=Hola+Juan%21+Me+gustar%C3%ADa+tener+m%C3%A1s+informaci%C3%B3n+sobre+como+podes+ayudarme+con+mi+TF%21+Gracias%21&app_absent=0" target="_blank" rel="noopener noreferrer"
+						><i class="fa-brands fa-whatsapp"></i
+					></a>
+				</div>
+
+>>>>>>> 278d3418279a83b9f2f329c08c77e5dca62b8b74
 				<h4>Contacto</h4>
-				<a href="tel:541112345678"><i class="fa-solid fa-phone"></i> +54 11 123 456-7890</a>
-				<a href="mailto:juan@juan.com"><i class="fa-solid fa-at"></i> juan@example.com</a>
+				<a href="tel:541158735951"><i class="fa-solid fa-phone"></i> +54 1158735951</a>
+				<a href="mailto:jvonzeschau@gmail.com"><i class="fa-solid fa-at"></i> jvonzeschau@gmail.com</a>
 			</section>
 			<section class="social">
 				<div class="contact-icons">
@@ -339,6 +351,8 @@
 			</section>
 		</footer>
 		<!-- Footer End -->
+		<!-- Boton whatsapp fixed -->
+		<a id="btn-whatsapp" class="whatsapp-fixed" href="https://api.whatsapp.com/send/?phone=5491158735951&text=Hola+Juan%21+Me+gustar%C3%ADa+tener+m%C3%A1s+informaci%C3%B3n+sobre+como+podes+ayudarme+con+mi+TF%21+Gracias%21&app_absent=0" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
 
 		<script src="js/app.js"></script>
 	</body>

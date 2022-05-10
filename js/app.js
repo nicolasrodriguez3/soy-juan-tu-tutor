@@ -8,7 +8,7 @@
 		$nav.classList.toggle("is-active")
 	})
 
-	$btn.addEventListener("blur", (e) => {
+	$btn.addEventListener("blur", () => {
 		setTimeout(() => {
 			$btn.firstElementChild.classList.remove("none")
 			$btn.lastElementChild.classList.add("none")
@@ -16,8 +16,26 @@
 		}, 100)
 	})
 
-	// Testimonials
-	
+	// Btn whatsapp
+const $btnWhatsapp = d.getElementById("btn-whatsapp")
+window.addEventListener("scroll", () => {
+	if (window.scrollY > 150) {
+		$btnWhatsapp.classList.add("is-active")
+	}
+	else {
+		$btnWhatsapp.classList.remove("is-active")
+	}
+})
+
+// Foto hero
+	const $fotoHero = d.getElementById("foto-hero-container"),
+		imgCircle = "../assets/2.png",
+		imgSquare = "../assets/img-juan.jpg",
+		$img = d.createElement("img")
+
+	 window.innerWidth < 768 ? $img.src = imgCircle : $img.src = imgSquare
+		
+	$fotoHero.appendChild($img)
 })(document)
 
 const $slider = document.querySelector(".slider"),
@@ -30,22 +48,22 @@ $slider.insertAdjacentElement("afterbegin", $lastSliderSection)
 const nextSlide = () => {
 	const $firstSliderSection = $slider.firstElementChild
 	$slider.style.transition = "all 0.4s ease-in-out"
-	$slider.style.marginLeft = "-100%"
+	$slider.style.marginLeft = "-200%"
 	setTimeout(() => {
 		$slider.insertAdjacentElement("beforeend", $firstSliderSection)
 		$slider.style.transition = ""
-		$slider.style.marginLeft = "-28%"
+		$slider.style.marginLeft = "-100%"
 	}, 400)
 }
 
 const prevSlide = () => {
 	const $lastSliderSection = $slider.lastElementChild
 	$slider.style.transition = "all 0.4s ease-in-out"
-	$slider.style.marginLeft = "42%"
+	$slider.style.marginLeft = "0%"
 	setTimeout(() => {
 		$slider.insertAdjacentElement("afterbegin", $lastSliderSection)
 		$slider.style.transition = ""
-		$slider.style.marginLeft = "-28%"
+		$slider.style.marginLeft = "-100%"
 	}, 400)
 }
 
@@ -60,3 +78,5 @@ $slider.addEventListener("mouseover", () => {
 $slider.addEventListener("mouseout", () => {
 	interval = setInterval(nextSlide, 5000)
 })
+
+
