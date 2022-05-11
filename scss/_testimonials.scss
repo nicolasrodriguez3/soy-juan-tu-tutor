@@ -28,9 +28,12 @@
 #testimonios{
 	overflow: hidden;
 	margin-bottom: 30px;
+	.testimonios {
+		display: grid;
+		grid-template-columns: 1fr auto;
+	}
 	.img-slider {
-		display: flex;
- 		justify-content: center;
+		width: 400px;
 	}
 }
 .container-slider{
@@ -73,4 +76,14 @@
 }
 .slider-btn-right{
 	right: 10px;
+}
+@media screen and (max-width: 992px) {
+	.testimonios {
+		.container-slider{
+			grid-column: 1/3;
+		}
+		.img-slider {
+			display: none;
+		}
+	}
 }

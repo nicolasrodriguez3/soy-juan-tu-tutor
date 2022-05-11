@@ -177,9 +177,12 @@
   overflow: hidden;
   margin-bottom: 30px;
 }
+#testimonios .testimonios {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
 #testimonios .img-slider {
-  display: flex;
-  justify-content: center;
+  width: 400px;
 }
 
 .container-slider {
@@ -229,6 +232,14 @@
   right: 10px;
 }
 
+@media screen and (max-width: 992px) {
+  .testimonios .container-slider {
+    grid-column: 1/3;
+  }
+  .testimonios .img-slider {
+    display: none;
+  }
+}
 @font-face {
   font-family: "Tally Text Bold 1";
   src: url(../assets/Tally-Text-Bold-1.ttf);
