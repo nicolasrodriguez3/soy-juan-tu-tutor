@@ -1,6 +1,6 @@
 .footerIndex {
 	width: 100%;
-	background-color: $first-color;
+	background-color: $third-color;
 	color: #000;
 	padding-top: 15px;
 	display: grid;
@@ -32,13 +32,16 @@
 		font-family: "Heebo", sans-serif;
 		text-align: center;
 		grid-column: 2/4;
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
 		h4{
 			font-size: 25px;
-			font-family: $font-family;
+			font-family: $font-title;
 			padding-bottom: 15px;
+		}
+		.contact-items {
+			display: flex;
+		 	justify-content: center;
+			align-items: center;
+			flex-direction: column;
 		}
 	}
 	.social {
@@ -46,10 +49,10 @@
 		text-align: center;
 		grid-column: 4/5;
 		.contact-icons {
-			font-size: 40px;
 			display: flex;
 			justify-content: center;
-			flex-direction: column;
+			flex-direction: row;
+			font-size: 40px;
 			gap: .75rem;
 		}
 		a{
@@ -62,7 +65,29 @@
 		grid-column: 1/5;
 	}
 }
-@media screen and (max-width: 372px) {
+@media screen and (max-width: 780px) {
+	.footerIndex {
+		grid-template-columns: 1fr 1fr;
+		.footerLinks{
+		  grid-column: 1/2;
+		  display: flex;
+		  justify-content: center;
+		  a{
+			  padding-left:35px;
+			}
+		}
+		.contact {
+			grid-column: 2/3;
+		}
+		.social {
+		  grid-column: 1/3;
+	  }
+		.copyRight {
+		  grid-column: 1/3;
+		}
+	  }    
+}
+@media screen and (max-width: 500px) {
     .footerIndex {
       grid-template-columns: 1fr;
       .footerLinks{
