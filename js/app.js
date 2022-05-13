@@ -29,8 +29,8 @@ window.addEventListener("scroll", () => {
 
 // Foto hero
 	const $fotoHero = d.getElementById("foto-hero-container"),
-		imgCircle = "./assets/2.png",
-		imgSquare = "./assets/img-juan.jpg",
+		imgCircle = "assets/2.png",
+		imgSquare = "assets/img-juan.jpg",
 		$img = d.createElement("img")
 
 	 window.innerWidth < 768 ? $img.src = imgCircle : $img.src = imgSquare
