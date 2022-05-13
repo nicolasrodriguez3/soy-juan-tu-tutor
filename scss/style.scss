@@ -1,7 +1,6 @@
 @import "variables";
 @import "footer";
 @import "service";
-@import "testimonials";
 
 @font-face {
 	font-family: "Tally Text Bold 1";
@@ -48,11 +47,11 @@ img {
 }
 /* Subtitulos */
 .subtitulo {
-	font-size: calc($fs2 + 3vw);
+	font-size: calc($fs3 + 3vw);
 	font-family: $font-title;
 	font-weight: bold;
 	text-align: center;
-	margin: 2rem auto;
+	margin: 2rem auto 3rem;
 	padding: 1rem 0;
 	border-top: 2px solid $first-color;
 	border-bottom: 2px solid $first-color;
@@ -63,8 +62,8 @@ img {
 /* Boton whatsapp */
 .whatsapp-fixed {
 	position: fixed;
-	bottom: 3%;
-	right: 3%;
+	bottom: 5%;
+	right: 2%;
 	z-index: 999;
 	color: white;
 	background-color: #25d366;
@@ -111,7 +110,7 @@ img {
 		text-decoration: none;
 		color: inherit;
 		&:hover {
-			color: $white-alpha-color;
+			color: $black-alpha-color;
 		}
 	}
 }
@@ -292,7 +291,13 @@ img {
 	flex-direction: column;
 	gap: 2rem;
 	position: relative;
-
+	.texto-adicional{
+		font-size: $fs4;
+		text-align: center;
+		line-height: 1.7;
+		max-width: 800px;
+		margin: 0 auto;
+	}
 	article {
 		background-color: #ffffff;
 		padding: 1rem;
@@ -322,6 +327,59 @@ img {
 	.img-fondo-servicios {
 		display: none;
 	}
+}
+
+/* Testimonios */
+#testimonios {
+	overflow: hidden;
+}
+.container-slider {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+.slider {
+	display: flex;
+	width: 1400%;
+	height: 400px;
+	margin-left: -100%;
+}
+.slider-section {
+	width: 100%;
+}
+.slider-img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+.slider-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: $white-alpha-color;
+	color: #000;
+	font: bold 25px monospace;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.slider-btn:hover {
+	background-color: $white-color;
+}
+.slider-btn-left {
+	left: 10px;
+}
+.slider-btn-right {
+	right: 10px;
+}
+.img-slider{
+	display: none;
 }
 
 //* MEDIA QUERY MIN 768PX
@@ -358,19 +416,41 @@ img {
 			}
 		}
 	}
-	.work .img-fondo-servicios {
+	.work {
+		article:nth-of-type(2){
+			position: relative;
+			left: 10%;
+		}
+		article:nth-of-type(3){
+			position: relative;
+			left: 20%;
+		}
+		.img-fondo-servicios {
 		display: block;
 		position: absolute;
 		z-index: -1;
-		bottom: 50%;
+		top: 10%;
 		right: 0;
-		transform: translateY(50%);
+		//transform: translateY(50%);
 		width: clamp(500px, 60vw, 1000px);
 		img {
 			margin-left: auto;
 			margin-right: 0;
 			width: 80%;
 		}
+	}
+}
+	.container-img-slider{
+		display: grid;
+		grid-template-columns: 40% 60%;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.img-slider{
+		display: block;
+		align-self: end;
+		width: 40vw;
+		z-index: -1;
 	}
 }
 @media screen and (min-width: 992px) {

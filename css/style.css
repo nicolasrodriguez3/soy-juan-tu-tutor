@@ -147,99 +147,6 @@
   }
 }
 /* Service End */
-.container-slider {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.container-slider .container-testimonials {
-  width: 400px;
-  height: 250px;
-  background-color: #fef9e7;
-  margin: 20px;
-  border-radius: 10px;
-  padding: 15px;
-}
-.container-slider .container-testimonials .fa-quote-left {
-  color: #f9a826;
-}
-.container-slider .container-testimonials p {
-  padding: 5px 10px 24px;
-  text-align: center;
-}
-.container-slider .container-testimonials h6 {
-  font-family: "Tally Text Bold 1", "Comic Sans MS", "Comic Sans", cursive;
-  font-size: 20px;
-}
-
-/* Testimonios */
-#testimonios {
-  overflow: hidden;
-  margin-bottom: 30px;
-}
-#testimonios .testimonios {
-  display: grid;
-  grid-template-columns: 1fr auto;
-}
-#testimonios .img-slider {
-  width: 400px;
-}
-
-.container-slider {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
-}
-
-.slider {
-  display: flex;
-  width: 1400%;
-  height: 300px;
-  margin-left: -100%;
-}
-
-.slider-section {
-  width: 100%;
-}
-
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
-  color: #000;
-  font: bold 25px monospace;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.slider-btn:hover {
-  background-color: #fff;
-}
-
-.slider-btn-left {
-  left: 10px;
-}
-
-.slider-btn-right {
-  right: 10px;
-}
-
-@media screen and (max-width: 992px) {
-  .testimonios .container-slider {
-    grid-column: 1/3;
-  }
-  .testimonios .img-slider {
-    display: none;
-  }
-}
 @font-face {
   font-family: "Tally Text Bold 1";
   src: url(../assets/Tally-Text-Bold-1.ttf);
@@ -294,11 +201,11 @@ img {
 
 /* Subtitulos */
 .subtitulo {
-  font-size: calc(2rem + 3vw);
+  font-size: calc(1.5rem + 3vw);
   font-family: "Tally Text Bold 1", "Comic Sans MS", "Comic Sans", cursive;
   font-weight: bold;
   text-align: center;
-  margin: 2rem auto;
+  margin: 2rem auto 3rem;
   padding: 1rem 0;
   border-top: 2px solid #f9a826;
   border-bottom: 2px solid #f9a826;
@@ -309,8 +216,8 @@ img {
 /* Boton whatsapp */
 .whatsapp-fixed {
   position: fixed;
-  bottom: 3%;
-  right: 3%;
+  bottom: 5%;
+  right: 2%;
   z-index: 999;
   color: white;
   background-color: #25d366;
@@ -359,7 +266,7 @@ img {
   color: inherit;
 }
 .header a:hover {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .btn-header {
@@ -534,6 +441,13 @@ img {
   gap: 2rem;
   position: relative;
 }
+.work .texto-adicional {
+  font-size: 1.25rem;
+  text-align: center;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
+}
 .work article {
   background-color: #ffffff;
   padding: 1rem;
@@ -560,6 +474,68 @@ img {
   color: #222;
 }
 .work .img-fondo-servicios {
+  display: none;
+}
+
+/* Testimonios */
+#testimonios {
+  overflow: hidden;
+}
+
+.container-slider {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  width: 1400%;
+  height: 400px;
+  margin-left: -100%;
+}
+
+.slider-section {
+  width: 100%;
+}
+
+.slider-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000;
+  font: bold 25px monospace;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-btn:hover {
+  background-color: #fff;
+}
+
+.slider-btn-left {
+  left: 10px;
+}
+
+.slider-btn-right {
+  right: 10px;
+}
+
+.img-slider {
   display: none;
 }
 
@@ -594,19 +570,40 @@ img {
     margin: auto;
   }
 
+  .work article:nth-of-type(2) {
+    position: relative;
+    left: 10%;
+  }
+  .work article:nth-of-type(3) {
+    position: relative;
+    left: 20%;
+  }
   .work .img-fondo-servicios {
     display: block;
     position: absolute;
     z-index: -1;
-    bottom: 50%;
+    top: 10%;
     right: 0;
-    transform: translateY(50%);
     width: clamp(500px, 60vw, 1000px);
   }
   .work .img-fondo-servicios img {
     margin-left: auto;
     margin-right: 0;
     width: 80%;
+  }
+
+  .container-img-slider {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .img-slider {
+    display: block;
+    align-self: end;
+    width: 40vw;
+    z-index: -1;
   }
 }
 @media screen and (min-width: 992px) {
