@@ -23,13 +23,16 @@
 			margin-left: 0;
 		}
 		ul li {
-			font-family: "Nunito", sans-serif;
+			font-family: $font-text;
 			list-style: none;
-			font-size: 20px;
+			font-size: 1rem;
+			line-height: 1.6;
+			i{
+				margin-right: 5px;
+			}
 		}
 	}
 	.contact{
-		font-family: "Heebo", sans-serif;
 		text-align: center;
 		grid-column: 2/4;
 		h4{
@@ -42,10 +45,10 @@
 		 	justify-content: center;
 			align-items: center;
 			flex-direction: column;
+			gap: .5rem;
 		}
 	}
 	.social {
-		font-family: "Heebo", sans-serif;
 		text-align: center;
 		grid-column: 4/5;
 		.contact-icons {
@@ -53,7 +56,8 @@
 			justify-content: center;
 			flex-direction: row;
 			font-size: 40px;
-			gap: .75rem;
+			gap: 1rem;
+			margin-bottom: 10px;
 		}
 		a{
 			display: block;
@@ -61,7 +65,6 @@
 	}
 	.copyRight {
 		text-align: center;
-		font-family: "Heebo", sans-serif;
 		grid-column: 1/5;
 	}
 }

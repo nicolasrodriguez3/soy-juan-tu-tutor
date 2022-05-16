@@ -1,10 +1,10 @@
 @import "variables";
 @import "footer";
-@import "service";
 
 @font-face {
 	font-family: "Tally Text Bold 1";
 	src: url(../assets/Tally-Text-Bold-1.ttf);
+	font-display: swap;
 }
 * {
 	box-sizing: border-box;
@@ -151,10 +151,9 @@ img {
 
 	a {
 		font-weight: bold;
-		font-size: $fs4;
+		font-size: $fs5;
 		padding: 1rem;
 		text-align: center;
-		word-wrap: none;
 	}
 }
 @media screen and (min-width: 768px) {
@@ -184,8 +183,8 @@ img {
 	background: none;
 	color: $white-color;
 	
-	background: $first-color;
-	border: 2px solid $first-color;
+	background: $first-alpha-color;
+	border: 2px solid $first-alpha-color;
 	border-radius: 4px;
 	font-size: $fs3;
 	font-weight: bold;
@@ -202,7 +201,7 @@ img {
 	width: 100%;
 	$opacidad-fondo: rgba(0, 0, 0, 0.4);
 	background: linear-gradient($opacidad-fondo 0%, $opacidad-fondo 100%),
-		url(https://img.freepik.com/foto-gratis/textura-fondo-tablero-corcho_133982-10.jpg?w=2000);
+		url(../assets/fondo-pizarra-corcho.webp);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -229,6 +228,7 @@ img {
 	justify-content: center;
 	color: $white-color;
 	text-align: center;
+	margin-bottom: 1rem;
 	h1 {
 		font-size: min(calc($fs3 + 2vw), 40px);
 		font-family: $font-title;
@@ -248,14 +248,13 @@ img {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top: 1rem;
 	img {
 		border-radius: 20px;
-		max-width: min(400px, 90vw);
-		width: 100%;
-		max-height: 600px;
-		height: 100%;
-		object-fit: cover;
+		//max-width: min(350px, 90vw);
+		//width: 100%;
+		max-height: 500px;
+		height: 80vh;
+		object-fit: contain;
 	}
 }
 
