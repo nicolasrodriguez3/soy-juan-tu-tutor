@@ -20,8 +20,8 @@
 		<!-- icons -->
 		<script src="https://kit.fontawesome.com/dc1b245fb6.js" crossorigin="anonymous"></script>
 		<!-- animation -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" async></script>
 	</head>
 	<body>
 		<div class="header-full">
@@ -71,7 +71,7 @@
 		<section id="acerca">
 			<article class="container">
 				<h3 class="subtitulo">Sobre mí</h3>
-				<div class="acerca-texto">
+				<div class="acerca-texto" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine">
 					<p>Me llamo <b>Juan</b></p>
 					<p>
 						Soy autor de libros y artículos académicos, investigador y docente universitario. Mi campo de conocimiento
@@ -84,7 +84,7 @@
 						teóricos, y también me gusta asistir en la escritura académica que este tipo de trabajos requieren.
 					</p>
 				</div>
-				<div class="acerca-foto">
+				<div class="acerca-foto" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine">
 					<img src="./assets/undraw_absorbed_in_re_ymd6.svg" alt="ilustracion" />
 				</div>
 			</article>
@@ -95,7 +95,7 @@
 				<h3 class="subtitulo">Modalidades de trabajo</h3>
 				<div class="work">
 					<p class="texto-adicional">¡Puedo acompañarte de diferentes maneras!</p>
-					<article class="shadows">
+					<article class="shadows" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
 						<i class="fa-solid fa-book-open"></i>
 						<h4>Puedo dirigir tu trabajo como tu tutor</h4>
 						<p>
@@ -106,7 +106,7 @@
 							estudiante.
 						</p>
 					</article>
-					<article class="shadows">
+					<article class="shadows" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
 						<i class="fa-solid fa-brain"></i>
 						<h4>Puedo corregir lo que tú escribas para que tenga un estilo y una calidad académicos</h4>
 						<p>
@@ -116,7 +116,7 @@
 							académico requiere, sin dejar por ello tus ideas de lado.
 						</p>
 					</article>
-					<article class="shadows">
+					<article class="shadows" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
 						<i class="fa-solid fa-check-double"></i>
 						<h4>Puedo corregir/mejorar el diseño metodológico</h4>
 						<p>
@@ -126,10 +126,10 @@
 							tu TFG/TFM, a efectos de que tenga solidez y coherencia.
 						</p>
 					</article>
-					<p class="texto-adicional">
+					<p class="texto-adicional" data-aos="fade-up" data-aos-offset="300" data-aos-anchor-placement="center-bottom">
 						Desde luego, hay muchas otras ayudas que pueden ser más adecuadas para que tú puedas avanzar en tu TFG/TFM. ¡Mi intención es adaptarme a lo que necesites! 
 					</p>
-					<picture class="img-fondo-servicios">
+					<picture class="img-fondo-servicios" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
 						<img src="assets/undraw_agree_re_hor9.svg" alt="ilustracion" />
 					</picture>
 				</div>
@@ -142,7 +142,7 @@
 			<div class="container">
 				<h3 class="subtitulo">Testimonios</h3>
 				<div class="container-img-slider">
-				<img class="img-slider" src="assets/undraw_things_to_say_re_jpcg.svg" alt="Comentarios">
+				<img class="img-slider" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" src="assets/undraw_things_to_say_re_jpcg.svg" alt="Comentarios">
 				<article class="container-slider">
 					<div class="slider" id="slider">
 						<picture class="slider-section">
@@ -231,5 +231,8 @@
 		<a id="btn-whatsapp" class="whatsapp-fixed" href="https://api.whatsapp.com/send/?phone=5491158735951&text=Hola+Juan%21+Me+gustar%C3%ADa+tener+m%C3%A1s+informaci%C3%B3n+sobre+como+podes+ayudarme+con+mi+TF%21+Gracias%21&app_absent=0" target="_blank" rel="noopener noreferrer" title="Enviar Whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
 
 		<script src="js/app.js"></script>
+		<script>
+			AOS.init();
+		</script>
 	</body>
 </html>
