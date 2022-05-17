@@ -1,0 +1,31 @@
+@import"variables";
+*{
+    scroll-behavior: smooth;
+}
+html {
+    scroll-behavior: smooth;
+  }
+body::-webkit-scrollbar {
+    -webkit-appearance: none;
+  }
+  
+  body::-webkit-scrollbar:vertical {
+    width: 14px;
+  }
+  
+  body::-webkit-scrollbar-button:increment, body::-webkit-scrollbar-button {
+    display: none;
+  }
+  
+  body::-webkit-scrollbar:horizontal {
+    height: 0.625rem;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: $third-color;
+    border-radius: 16px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    border-radius: 16px;
+  }

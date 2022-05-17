@@ -113,6 +113,39 @@
     grid-column: 1;
   }
 }
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+body::-webkit-scrollbar:vertical {
+  width: 14px;
+}
+
+body::-webkit-scrollbar-button:increment, body::-webkit-scrollbar-button {
+  display: none;
+}
+
+body::-webkit-scrollbar:horizontal {
+  height: 0.625rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ffba4c;
+  border-radius: 16px;
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 16px;
+}
+
 @font-face {
   font-family: "Tally Text Bold 1";
   src: url(../assets/Tally-Text-Bold-1.ttf);
