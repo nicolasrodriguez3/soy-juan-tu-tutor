@@ -29,7 +29,7 @@ window.addEventListener("scroll", () => {
 
 // Foto hero
 	const $fotoHero = d.getElementById("foto-hero-container"),
-		imgCircle = "assets/2.webp",
+		imgCircle = "assets/logo.webp",
 		imgSquare = "assets/img-juan.webp",
 		$img = d.createElement("img")
 		$img.ariaLabel = "Foto Juan"
