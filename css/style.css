@@ -78,9 +78,6 @@
     display: flex;
     justify-content: center;
   }
-  .footerIndex .footerLinks a {
-    padding-left: 35px;
-  }
   .footerIndex .contact {
     grid-column: 2/3;
   }
@@ -99,9 +96,6 @@
     grid-column: 1;
     display: flex;
     justify-content: center;
-  }
-  .footerIndex .footerLinks a {
-    padding-left: 35px;
   }
   .footerIndex .contact {
     grid-column: 1;
@@ -402,7 +396,6 @@ img {
 .hero-img img {
   border-radius: 20px;
   max-height: 500px;
-  height: 80vh;
   object-fit: contain;
 }
 
@@ -416,11 +409,13 @@ img {
   display: grid;
   align-items: center;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 #acerca .acerca-foto {
   width: 100%;
   margin-top: 1rem;
   grid-row: 3/span 1;
+  position: relative;
 }
 #acerca .acerca-foto img {
   margin: auto;
@@ -452,7 +447,7 @@ img {
   flex-direction: column;
   gap: 1.5rem;
   margin-right: auto;
-  margin-left: 1rem;
+  margin-left: auto;
   max-width: max(500px, 50%);
 }
 .work article > i {
@@ -567,6 +562,9 @@ img {
     margin: auto;
   }
 
+  .work article {
+    margin-left: 2rem;
+  }
   .work article:nth-of-type(2) {
     position: relative;
     left: 10%;
